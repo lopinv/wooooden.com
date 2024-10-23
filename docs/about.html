@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="applicable-device" content="pc" />
+
+    <title>国内品牌二手办公家具循环利用引导者-装配师循环家具</title>
+    <meta name="Keywords" content="第二树,第二树循环家具,二手办公家具,循环办公家具,办公家具循环利用,品牌二手办公家具" />
+    <meta name="Description" content="第二树循环家具是国内专业的品牌二手办公家具综合连锁服务商，倡导实现更多办公家具循环利用，为企业提供注重经济与环境双重效应的循环办公家具解决方案。" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/css/style.min.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/6.6.2/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/layui/2.7.6/css/layui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/css/certify.css">
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- Header -->
+        <div class="header">
+            <header>
+                <div class="header-left"><a href="." target="_blank"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/logo3.png" alt=""
+                            style="width: 100%"></a></div>
+                <ul class="navHref">
+                    <li><a class="" href="." title="首页">首页 <em>HOT</em></a></li>
+                    <li><a class="" href="product.html" title="产品中心">产品中心</a></li>
+                    <li><a class="" href="case.html" title="案例中心">案例中心</a></li>
+                    <li><a class="" href="esg.html" title="ESG理念">ESG理念</a></li>
+                    <li><a class="" href="newsIndex.html" title="行业资讯">行业资讯</a></li>
+                    <li><a class="activity" href="about.html" title="关于我们">关于我们</a></li>
+                </ul>
+                <div class="header-right">电话：185-1668-7118</div>
+            </header>
+        </div>
+
+        <!--主体-->
+
+        <!-- 主体 -->
+        <section id="content" v-cloak>
+
+            <!--banner-->
+            <div class="banner-about">
+                <div class="w1280">
+                    <div class="about-banner-box" data-scroll-reveal="wait 0.2s, then enter left and move 50px over 2s">
+                        <div class="box-logo"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/logo.png"></div>
+                        <div class="box-title">
+                            与您一起<br>低碳减排 绿色办公
+                            <em></em>
+                        </div>
+                        <div class="box-number">
+                            <dl>
+                                <dt class="obj1">90816<em>家</em></dt>
+                                <dd>客户合作数</dd>
+                            </dl>
+                            <dl>
+                                <dt class="obj2">1150334<em>件</em></dt>
+                                <dd>循环家具数</dd>
+                            </dl>
+                            <dl>
+                                <dt class="obj3">27468720<em>kg</em></dt>
+                                <dd>合计减碳值</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--企业介绍-->
+            <div class="brand-intro">
+                <div class="intro-box w1280">
+                    <div class="intro-title wow fadeInDown">
+                        品牌办公家具循环利用引导者
+                    </div>
+                    <div class="intro-content wow fadeInUp" data-wow-delay="0.1s">
+                        第二树循环家具2009年成立于北京，专注于中高档品牌二手办公家具的回收、销售、租赁、拆装、运输、翻新、<br>
+                        仓储及捐赠等业务，提供二手办公家具评估、工地测量、摆放设计、清洗、安装、维修等服务。<br>
+                        公司采用线下连锁展厅仓储销售与线上网络服务相结合的经营模式。<br>
+                        现已成立北京、上海（青浦/浦东/闵行）、广州、深圳、天津、武汉、杭州、成都、重庆、香港、长沙，<br>
+                        13大公司，拥有近10万平米展厅+仓储面积，是国内专业的二手办公家具服务商。<br>
+                    </div>
+                    <div class="intro-video videoShow  wow zoomIn" data-wow-delay="0.1s">
+                        观看视频<img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/btn-video.png">
+                    </div>
+                </div>
+            </div>
+
+            <!--站点展厅-->
+            <div class="zt-site">
+                <div class="w1280">
+                    <div class="layout-tilte wow fadeInDown">
+                        <p>展厅实景</p>
+                        <p></p>
+                    </div>
+                    <div class="site-box wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="zt-nav">
+                            <ul>
+                                <li class=" " @click="clickSiteTab('0')">
+                                    <span :class="{'active':site_tab_idx ==  '0'}">北京李桥店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('12')">
+                                    <span :class="{'active':site_tab_idx ==  '12'}">北京双桥店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('1')">
+                                    <span :class="{'active':site_tab_idx ==  '1'}">上海青浦店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('2')">
+                                    <span :class="{'active':site_tab_idx ==  '2'}">上海浦东店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('3')">
+                                    <span :class="{'active':site_tab_idx ==  '3'}">上海闵行店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('13')">
+                                    <span :class="{'active':site_tab_idx ==  '13'}">上海金桥店</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('4')">
+                                    <span :class="{'active':site_tab_idx ==  '4'}">广州</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('5')">
+                                    <span :class="{'active':site_tab_idx ==  '5'}">深圳</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('6')">
+                                    <span :class="{'active':site_tab_idx ==  '6'}">天津</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('7')">
+                                    <span :class="{'active':site_tab_idx ==  '7'}">武汉</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('8')">
+                                    <span :class="{'active':site_tab_idx ==  '8'}">杭州</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('9')">
+                                    <span :class="{'active':site_tab_idx ==  '9'}">成都</span>
+                                </li>
+                                <li class=" " @click="clickSiteTab('11')">
+                                    <span :class="{'active':site_tab_idx ==  '11'}">香港</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==0">
+                            <ul>
+                                <li>{{site_content_list[0].city}}</li>
+                                <li>面积：{{site_content_list[0].area}}m²</li>
+                                <li>公司地址：{{site_content_list[0].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[0].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[0].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==12">
+                            <ul>
+                                <li>{{site_content_list[12].city}}</li>
+                                <li>面积：{{site_content_list[12].area}}m²</li>
+                                <li>公司地址：{{site_content_list[12].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[12].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[12].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==1">
+                            <ul>
+                                <li>{{site_content_list[1].city}}</li>
+                                <li>面积：{{site_content_list[1].area}}m²</li>
+                                <li>公司地址：{{site_content_list[1].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[1].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[1].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==2">
+                            <ul>
+                                <li>{{site_content_list[2].city}}</li>
+                                <li>面积：{{site_content_list[2].area}}m²</li>
+                                <li>公司地址：{{site_content_list[2].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[2].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[2].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==3">
+                            <ul>
+                                <li>{{site_content_list[3].city}}</li>
+                                <li>面积：{{site_content_list[3].area}}m²</li>
+                                <li>公司地址：{{site_content_list[3].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[3].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[3].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==13">
+                            <ul>
+                                <li>{{site_content_list[13].city}}</li>
+                                <li>面积：{{site_content_list[13].area}}m²</li>
+                                <li>公司地址：{{site_content_list[13].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[13].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[13].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==4">
+                            <ul>
+                                <li>{{site_content_list[4].city}}</li>
+                                <li>面积：{{site_content_list[4].area}}m²</li>
+                                <li>公司地址：{{site_content_list[4].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[4].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[4].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==5">
+                            <ul>
+                                <li>{{site_content_list[5].city}}</li>
+                                <li>面积：{{site_content_list[5].area}}m²</li>
+                                <li>公司地址：{{site_content_list[5].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[5].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[5].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==6">
+                            <ul>
+                                <li>{{site_content_list[6].city}}</li>
+                                <li>面积：{{site_content_list[6].area}}m²</li>
+                                <li>公司地址：{{site_content_list[6].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[6].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[6].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==7">
+                            <ul>
+                                <li>{{site_content_list[7].city}}</li>
+                                <li>面积：{{site_content_list[7].area}}m²</li>
+                                <li>公司地址：{{site_content_list[7].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[7].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[7].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==8">
+                            <ul>
+                                <li>{{site_content_list[8].city}}</li>
+                                <li>面积：{{site_content_list[8].area}}m²</li>
+                                <li>公司地址：{{site_content_list[8].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[8].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[8].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==9">
+                            <ul>
+                                <li>{{site_content_list[9].city}}</li>
+                                <li>面积：{{site_content_list[9].area}}m²</li>
+                                <li>公司地址：{{site_content_list[9].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[9].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[9].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==10">
+                            <ul>
+                                <li>{{site_content_list[10].city}}</li>
+                                <li>面积：{{site_content_list[10].area}}m²</li>
+                                <li>公司地址：{{site_content_list[10].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[10].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[10].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                        <div class="zt-intro" v-show="site_tab_idx==11">
+                            <ul>
+                                <li>{{site_content_list[11].city}}</li>
+                                <li>面积：{{site_content_list[11].area}}m²</li>
+                                <li>公司地址：{{site_content_list[11].address}}</li>
+                                <li><span class="shangqiao">立即预约上门</span><span><a :href="site_content_list[11].url"
+                                            target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                            </ul>
+                            <div class="intro-img">
+                                <div class="swiper-container swiper-site">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" v-for="(zt,index) in site_content_list[11].imgs">
+                                            <img :src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/c04707a6b54c401bb98a317439a6983d.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-site"></div>
+                                <div class="swiper-button-prev swiper-prev-site"></div>
+                                <div class="swiper-button-next swiper-next-site"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--企业文化-->
+            <div class="qywh">
+                <div class="w1280">
+                    <div class="layout-tilte wow fadeInDown" data-wow-offset="100">
+                        <p style="color: #ffffff !important;">企业文化</p>
+                        <p style="border: 2px solid #ffffff;"></p>
+                    </div>
+                    <div class="qywh-box  wow fadeInUp">
+                        <div class="swiper-container swiper-qywh">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="slide-content-left">
+                                            <div><em></em>企业使命</div>
+                                            <div>为客户降低成本<br>为社会节约资源<br>为环境减少排放</div>
+                                        </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qywh1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="slide-content-left">
+                                            <div><em></em>企业愿景</div>
+                                            <div>打造全球循环家具第一品牌！</div>
+                                        </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qywh2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="slide-content-left">
+                                            <div><em></em>经营理念</div>
+                                            <div>引领行业发展<br>注重客户体验<br>帮助员工成长</div>
+                                        </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qywh3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="slide-content-left">
+                                            <div><em></em>企业价值观</div>
+                                            <div>和：人和意合，家和业兴<br>善：善心善念，善行善果<br>专：专心专注，专业专才<br>勤：勤奋努力，勤俭节约</div>
+                                        </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qywh4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="slide-content-left">
+                                            <div><em></em>服务理念</div>
+                                            <div>持续为客户创造惊喜！<br>为企业提供注重经济和环境<br>双重效益的循环办公家具解<br>决方案！</div>
+                                        </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qywh5.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-solid">
+                            <div class="swiper-container solid-qywh">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <em></em>
+                                        <em></em>
+                                        <span>企业使命</span>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <em></em>
+                                        <em></em>
+                                        <span>企业愿景</span>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <em></em>
+                                        <em></em>
+                                        <span>经营理念</span>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <em></em>
+                                        <em></em>
+                                        <span>企业价值观</span>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <em></em>
+                                        <em></em>
+                                        <span>服务理念</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--荣誉证书-->
+            <div class="part5">
+                <div class="w1280">
+                    <div class="layout-tilte wow fadeInDown">
+                        <p>荣誉资质</p>
+                        <p></p>
+                    </div>
+                    <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                        <div id="certify">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/15.jpg" />
+                                        <p>荣获2023年面向SDG的中国行动“金钥匙•优胜奖”</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/14.jpg" />
+                                        <p>荣获2023年向光奖·年度商业向善TOP10</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/13.jpg" />
+                                        <p>荣获第二届ESG年度大奖-循环经济奖</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/1.jpg" />
+                                        <p>荣膺2022年时代财智·亚洲最具潜力独角兽奖</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2.jpg" />
+                                        <p>入选可持续消费中国企业行动报告优秀案例</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/3.jpg" />
+                                        <p>中国家具协会会员单位</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/4.jpg" />
+                                        <p>中环联合碳减排评价证书</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/5.jpg" />
+                                        <p>绿色共享与循环利用贡献奖</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/7.jpg" />
+                                        <p>中国旧货业协会业务经营资格证</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/8.jpg" />
+                                        <p>中国绿化基金会捐赠证书</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/9.jpg" />
+                                        <p>深圳市办公设备租赁行业协会理事单位</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/10.jpg" />
+                                        <p>中国旧货业协会副会长单位</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/11.jpg" />
+                                        <p>京东循环发展产业联盟常务理事单位</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/12.jpg" />
+                                        <p>全国二手货标准化技术委员会委员</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-certify"></div>
+                            <div class="swiper-button-prev swiper-prev-certify"></div>
+                            <div class="swiper-button-next swiper-next-certify"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--发展历程-->
+            <div class="course">
+                <div class="w1280" style="    position: relative;">
+                    <div class="layout-tilte wow fadeInUp">
+                        <p style="color: #ffffff">发展历程</p>
+                        <p></p>
+                    </div>
+                    <div class="course-box wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="swiper-container milestone-tab">
+                            <div class="swiper-wrapper milestone-title">
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.1s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute !important;">2024</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.1s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute !important;">2023</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.2s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute !important;">2022</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.3s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2021</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.4s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2020</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.5s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2019</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li wow flipInX" data-wow-delay="0.6s">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2018</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2017</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2016</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2015</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2014</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2013</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2011</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-li">
+                                        <div class="item-active1"></div>
+                                        <!--<div class="item-active2"></div>-->
+                                        <span style="position: absolute;">2009</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-container milestone-content" style="padding-top: 70px">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/lc-24-495.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>9月</span><br>成立第二树上海浦东金桥店，展厅面积750平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/lc-23.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>3月</span><br>成立第二树香港分公司，仓储及展厅面积800平米</p>
+                                                <p><span>7月</span><br>开设第二树北京双桥店，展厅面积1200平米</p>
+                                                <p><span>10月</span><br>成立第二树新加坡分公司</p>
+                                                <p><span>11月</span><br>新增第二树北京李桥店，展厅及仓储面积12000平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2022.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>4月</span><br>第二树深圳分公司扩仓，仓储及展区面积增至8000平米<br>第二树广州分公司搬至番禺区丽景路，仓储及展区面积11000平米
+                                                </p>
+                                                <p><span>11月</span><br>成立第二树重庆分公司，仓储及展厅面积6000平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2021.jpg" alt=""></dt>
+                                            <dd>
+                                                <p>
+                                                    <span>4月</span><br>
+                                                    获批中国循环经济协会理事单位
+                                                </p>
+                                                <p>
+                                                    <span>5月</span><br>
+                                                    成立第二树深圳分公司，仓储及展区面积5000平米<br>
+                                                </p>
+                                                <p>
+                                                    <span>6月</span><br>
+                                                    获批深圳市办公设备租赁行业协会理事单位<br>
+                                                </p>
+                                                <p>
+                                                    <span>7月</span><br>
+                                                    获批中国家具协会会员单位<br>
+                                                </p>
+                                                <p>
+                                                    <span>9月</span><br>
+                                                    成立第二树上海闵行分公司，仓储及展区面积5000平米<br>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2020.jpg" alt=""></dt>
+                                            <dd>
+                                                <p>
+                                                    <span>5月</span><br>
+                                                    成立第二树上海浦东分公司，仓储及展区面积2000平米
+                                                </p>
+                                                <p>
+                                                    <span>12月</span><br>
+                                                    上海分公司搬迁至青浦华新镇，仓储面积扩展至12000平米<br>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2019.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>5月</span><br>成立第二树杭州分公司，仓储及展区面积6000平米</p>
+                                                <p><span>9月</span><br>成立第二树成都分公司，仓储及展区面积6000平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2018.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>3月</span><br>获批为中国旧货业协会副会长单位<br>作为二手龙头企业入驻山东枣庄市国际闲置品循环链示范区</p>
+                                                <p><span>8月</span><br>北京朝阳区尚都SOHO店盛大开业</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2017.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>11月</span><br>成为循环发展产业联盟常务理事单位</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2016.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>1月</span><br>正式启用并推广“第二树”品牌</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2015.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>4月</span><br>成立第二树广州分公司，仓储及展区面积4000平米</p>
+                                                <p><span>7月</span><br>成立第二树天津分公司，仓储及展区面积7500平米</p>
+                                                <p><span>9月</span><br>成立第二树武汉分公司，仓储及展区面积5000平米</p>
+                                                <p><span>11月</span><br>成立第二树长沙分公司，开展公司全网营销运营与研发</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2014.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>6月</span><br>获批为家具办公设备数码产品专业委员会常务副会长单位</p>
+                                                <p><span>8月</span><br>北京仓储面积扩展至10000平米</p>
+                                                <p><span>9月</span><br>成立第二树上海分公司，仓储及展区面积6000平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2013.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>9月</span><br>获批为中国旧货业协会会员单位</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2011.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>10月</span><br>北京仓储面积扩展至6500平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="milestone-item">
+                                        <dl>
+                                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/2009.jpg" alt=""></dt>
+                                            <dd>
+                                                <p><span>8月</span><br>创立北京公司，北京仓储面积600平米</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-prev-course"></div>
+                    <div class="swiper-button-next swiper-next-course"></div>
+                </div>
+            </div>
+
+            <!--公益-->
+            <div class="welfare">
+                <div class="w1280">
+                    <div class="layout-tilte wow fadeInUp">
+                        <p>爱心公益</p>
+                        <p></p>
+                    </div>
+                    <div class="welfare-box wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="swiper-container swiper-welfare">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy24.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2024年1月</p>
+                                            <p>第二树携手猿辅导，开启大树之光 × 守护童心计划第三期，将上千绘本、跳绳、筋膜球等物品分别寄往云南昭通社区、深圳南山区星途创艺梦想画室</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy23.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2023年12月</p>
+                                            <p>第二树大树之光×守护童心计划，携手猿力科技有限公司，将279本童书绘本送到云南泸沽湖达组小学有需要的孩子手中</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy22.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2023年8月</p>
+                                            <p>第二树为渣打银行“未来创客”项目捐赠241088元，用于开展公益慈善活动</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy01.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2022年12月</p>
+                                            <p>第二树携手JLL仲量联行，开启大树之光 × 换新衣计划，向云南昭通大寨村完小学及新开村小学的339位孩子送去冬衣御寒</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy02.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2022年10月</p>
+                                            <p>第二树-大树之光 × 湿地守护计划，向上海崇明东滩鸟类国家级自然保护区中兴镇富圩村基地教室捐赠家具69件</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy03.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2022年04月</p>
+                                            <p>第二树联动渣打银行向广东省云浮市新兴县三所小学及贫困学子捐赠650套课桌椅，88把课椅，价值20万元</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy04.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2022年1月</p>
+                                            <p>第二树大树之光公益活动启程，携手麦森医疗向花仓村捐助物资，普及医疗急救知识</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy05.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2021年12月</p>
+                                            <p>第二树联合各界爱心企业发起大树之光公益系列计划，征集活动已于12月8日正式启动</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy06.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2021年10月</p>
+                                            <p>第二树&正品达联手向大凉山雷波县四所学校捐赠700套课桌椅，价值约20万元</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy07.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2020-2025年</p>
+                                            <p>每年向中国绿化基金会捐赠10万元，开展新疆干旱区立地生态保护修复建设项目</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy08.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2019年6月</p>
+                                            <p>向北京金盏东村双语学校免费捐赠了75件办公家具</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy09.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2018年3月</p>
+                                            <p>向海兴县小山乡赵高教学点进行家具捐赠</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy10.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2015年6月</p>
+                                            <p>向北京爱力重症肌无力罕见病关爱中心捐赠绿色一批办公家具，大力支持爱力机构</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy11.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2015年2月</p>
+                                            <p>向地球妈妈易解放女士捐助2万元，在内蒙植树2000棵</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy12.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2014年11月</p>
+                                            <p>向一名白血病孩子捐赠</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy13.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2014年10月</p>
+                                            <p>向一名患眼癌的孩子捐赠，并向孩子家长提供合适的工作机会</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy14.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2014年7月</p>
+                                            <p>参与株洲儿童福利院献爱心活动，并捐赠几十台学习机</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy15.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2014年5月</p>
+                                            <p>与中国旧货业协会及中国环保协会一起为从事环保行业的小微企业捐助办公家具</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy16.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2014年5月</p>
+                                            <p>免费为社会各界捐助价值40余万元的二手办公家具</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy17.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2013年11月</p>
+                                            <p>与中国旧货业协会、中国环保协会协办办公家具免费捐赠活动</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy18.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2013年5月</p>
+                                            <p>参与“金秋助学”活动向3名大学生资助学费至今</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy19.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2013年5月</p>
+                                            <p>通过清华紫光教育的引荐向北京的藏区孤儿院资助了100多把高档折叠椅</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy20.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2013年2月</p>
+                                            <p>北京昌平汶川地震孤儿的福利院捐助价值3万元的椅子</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide">
+                                    <dl>
+                                        <dt> <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/gy21.jpg" alt=""></dt>
+                                        <dd>
+                                            <p>2011年9月</p>
+                                            <p>借助“荧火虫”平台资助多名家境贫穷的孩子至今</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-welfare"></div>
+                        </div>
+
+                        <div class="swiper-button-prev swiper-prev-welfare"></div>
+                        <div class="swiper-button-next swiper-next-welfare"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <div class="footer-guarantee">
+                    <div class="w1280 flexRC" style="border-bottom: 1px solid #bfbfbf;">
+                        <dl>
+                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/footer-bz1.png" alt="全国连锁"></dt>
+                            <dd>
+                                <p>全国连锁</p>
+                                <p>全国13家分公司</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/footer-bz2.png" alt="专业服务"></dt>
+                            <dd>
+                                <p>专业服务</p>
+                                <p>15年成熟服务经验</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/footer-bz3.png" alt="现货仓储"></dt>
+                            <dd>
+                                <p>现货仓储</p>
+                                <p>全国近10万平仓储面积</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/footer-bz4.png" alt="国内外名企回收货源"></dt>
+                            <dd style="width: 160px;">
+                                <p>品质货源</p>
+                                <p>国内外名企回收货源</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="footer-mode flexRC">
+                    <div class="w1280 flexR" style="padding-top: 45px;">
+                        <!--<div class="logo flexCC"><a href="https://www.jdwy.cn" target="_blank"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/logo3.png"></a></div>-->
+                        <ul class="nav ">
+                            <li><b>认识我们</b></li>
+                            <li><a href="/help/5.html" title="关于我们" target="_blank">关于我们</a></li>
+                            <li><a href="/help/6.html" title="发展历程" target="_blank">发展历程</a></li>
+                            <li><a href="/help/7.html" title="展厅地址" target="_blank">展厅地址</a></li>
+                            <li><a href="/help/8.html" title="爱心公益" target="_blank">爱心公益</a></li>
+                            <li><a href="case.html" title="服务案例" target="_blank">服务案例</a></li>
+                            <li><a href="esg.html" title="ESG碳减排" target="_blank">ESG碳减排</a></li>
+                        </ul>
+                        <ul class="nav ">
+                            <li><b>产品种类</b></li>
+                            <li><a href="/product/#/type/2.html" title="工位/职员桌" target="_blank">工位/职员桌</a></li>
+                            <li><a href="/product/#/type/3.html" title="班台/经理桌" target="_blank">班台/经理桌</a></li>
+                            <li><a href="/product/#/type/1.html" title="办公椅/电脑椅" target="_blank">办公椅/电脑椅</a></li>
+                            <li><a href="/product/#/type/5.html" title="件柜/小推柜" target="_blank">文件柜/小推柜</a></li>
+                            <li><a href="/product/#/type/4.html" target="_blank">会议桌/洽谈桌</a></li>
+                            <li><a href="/product/#/type/6.html" title="件柜/小推柜" target="_blank">沙发/茶几</a></li>
+                        </ul>
+                        <ul class="nav ">
+                            <li><b>服务支持</b></li>
+                            <li><a href="/help/1.html" title="租赁业务" target="_blank">租赁业务</a></li>
+                            <li><a href="/help/2.html" title="回收业务" target="_blank">回收业务</a></li>
+                            <li><a href="/help/3.html" title="售后保障" target="_blank">售后保障</a></li>
+                            <li><a href="/help/4.html" title="配送说明" target="_blank">配送说明</a></li>
+                        </ul>
+                        <ul class="nav ">
+                            <li><b>资讯动态</b></li>
+                            <li><a href="/news/list/type/3.html" title="企业动态" target="_blank">企业动态</a></li>
+                            <li><a href="/news/list/type/4.html" title="市场资讯" target="_blank">市场资讯</a></li>
+                            <li><a href="/news/list/type/5.html" title="优惠活动" target="_blank">优惠活动</a></li>
+                            <li><a href="/news/list/type/6.html" title="好货推荐" target="_blank">好货推荐</a></li>
+                            <li><a href="/news/list/type/7.html" title="家具知识" target="_blank">家具知识</a></li>
+                        </ul>
+                        <div class="mode-link">
+                            <div class="link-center"></div>
+                        </div>
+                        <div class="contact ">
+                            <p><a href="https://www.jdwy.cn" target="_blank"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/logo3.png"
+                                        style="width: 180px;"></a></p>
+                            <p>全国统一服务热线</p>
+                            <p>400-178-1088</p>
+                            <p>（周一至周日 08:00-22:00）</p>
+                            <p>关注我们</p>
+                            <ul>
+                                <li onmousemove="qrcodeShow(1)" onmouseout="qrcodeHide()">
+                                    <img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-wx-no.png"
+                                        style="width:32px;height:32px;cursor: pointer;padding-right: 30px">
+                                    <img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-wx-yes.png"
+                                        style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
+                                    <div class="qrcode-img pop-img01">
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qrcode-wx.png">
+                                    </div>
+                                </li>
+                                <li onmousemove="qrcodeShow(2)" onmouseout="qrcodeHide()">
+                                    <img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-wb-no.png"
+                                        style="width:32px;height:32px;cursor: pointer;padding-right: 30px">
+                                    <img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-wb-yes.png"
+                                        style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
+                                    <div class="qrcode-img pop-img02">
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qrcode-wb.png">
+                                    </div>
+                                </li>
+                                <li onmousemove="qrcodeShow(3)" onmouseout="qrcodeHide()">
+                                    <img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-dy-no.png"
+                                        style="width:32px;height:32px;cursor: pointer;">
+                                    <img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/ico-dy-yes.png"
+                                        style="width:32px;height:32px;cursor: pointer;display:none;">
+                                    <div class="qrcode-img pop-img03">
+                                        <img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/qrcode-dy.png">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--<div class="attention"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/wx.png" >关注公众号</div>-->
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="w1280 links-box">
+                        <div class="links-left">
+                            友情链接：
+                        </div>
+                        <div class="links-right">
+                            <ul>
+                                <li><a href="https://bj.jdwy.cn/" target="_blank">北京二手办公家具</a></li>
+                                <li><a href="https://sh.jdwy.cn/" target="_blank">上海二手办公家具</a></li>
+                                <li><a href="https://gz.jdwy.cn/" target="_blank">广州二手办公家具</a></li>
+                                <li><a href="https://sz.jdwy.cn/" target="_blank">深圳二手办公家具</a></li>
+                                <li><a href="https://tj.jdwy.cn/" target="_blank">天津二手办公家具</a></li>
+                                <li><a href="https://wh.jdwy.cn/" target="_blank">武汉二手办公家具</a></li>
+                                <li><a href="https://hz.jdwy.cn/" target="_blank">杭州二手办公家具</a></li>
+                                <li><a href="https://cd.jdwy.cn/" target="_blank">成都二手办公家具</a></li>
+                                <li><a href="https://cq.jdwy.cn/" target="_blank">重庆二手办公家具</a></li>
+                                <li><a href="https://hs.jdwy.cn/" target="_blank">二手办公家具回收</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <div class="w1280 flexRC">
+                        <p>中国 • 上海 & 装配师 ©2018-2024</p>
+                        <p>&nbsp;|&nbsp;佳匠实业 版权所有 <a href="https://www.gsxt.gov.cn/index.html" target="_blank" rel="nofollow noopener noreferrer external">91310230MA1JURGJ0F</a> <a href="https://surl.amap.com/snA8eEk1k0Oq" target="_blank" rel="nofollow noopener noreferrer external"></a>上海市松江区石湖荡镇石湖新路95号</a> 201604 <a href="https://www.issem.cn" rel="publisher external" target="_blank">楚莺营销</a>提供网络营销技术支持&nbsp;|&nbsp;</p>
+                        <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="external nofollow">沪ICP备2021004498号</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!--右侧导航-->
+        <ul class="rightMenu">
+            <li onmousemove="rightMenuShow(1)" onmouseout="rightMenuHide()">
+                <a href="javascript:void (0)" title="">
+                    <span class="maximg">
+                        <img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-01.png" style="height: 100%;" />
+                        <img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-on-01.png" style="height: 100%;" />
+                    </span>
+                    <p>咨询热线</p>
+                </a>
+                <div class="rightMenu-show pop-menu01">
+                    <p>400-178-1088</p>
+                    <p>周一至周日 8:00-22:00</p>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void (0)" title="" class="shangqiao">
+                    <span class="maximg">
+                        <img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-03.png" />
+                        <img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-on-03.png" />
+                    </span>
+                    <p>联系客服</p>
+                </a>
+            </li>
+            <!--<li style="display: none">-->
+            <!--<a >-->
+            <!--<span class="maximg">-->
+            <!--<img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-04.png" />-->
+            <!--<img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-on-04.png" />-->
+            <!--</span>-->
+            <!--<p>批量采购</p>-->
+            <!--</a>-->
+            <!--</li>-->
+            <li class="zhiding" id="zhiding">
+                <a href="javascript:void(0)" title="">
+                    <span class="maximg">
+                        <img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-05.png" />
+                        <img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/picture/rightnav-on-05.png" />
+                    </span>
+                    <p>回到顶部</p>
+                </a>
+            </li>
+        </ul>
+
+        <!--底部悬浮表单-->
+        <div class="footerForm">
+            <div id="colseFrom" class="colse check-open" onclick="showFooterForm()"></div>
+            <div style="background: rgba(0, 0, 0, 0.7);">
+                <div class="w1280 footerForm-in">
+                    <span>一站式办公家具服务　<strong>省钱买 放心用</strong></span>
+                    <input placeholder="请输入姓名" maxlength="8" type="text" id="userNameFrom" />
+                    <input placeholder="请输入手机号" maxlength="11" type="text" id="userPhoneFrom" />
+                    <button type="button" onclick="saveConsult()" style="cursor: pointer">提交申请</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--JS引用-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.7.6/layui.min.js"></script>
+    <script>
+        var layer = layui.layer,
+            element = layui.element,
+            form = layui.form;
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/6.6.2/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/js/jquery.lazyload.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/js/scrollreveal.js"></script>
+
+    <!--页面JS脚本-->
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/js/about.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        var wow = new WOW(
+            {
+                boxClass: 'wow',      // 需要执行动画的元素的 class(默认是wow)
+                animateClass: 'animated', // animation.css 动画的 class(默认是animated)
+                offset: 100,          // 距离可视区域多少开始执行动画(默认为0)
+                mobile: true,       // 是否在移动设备上执行动画(默认为true)
+                live: true,       // 异步加载的内容是否有效(默认为true)
+                callback: function (box) {
+                    // 每次动画启动时都会触发这个回调函数
+                    //传入的参数是动画DOM节点
+                },
+                scrollContainer: null // 可选滚动容器选择器，否则使用窗口
+            }
+        );
+        wow.init();
+        function playVideo(opt) {
+            if (typeof (opt) == "undefined") {
+                alert("请传入必要参数！");
+                return;
+            }
+            if (typeof (opt.elemt) == "undefined") {
+                alert("请指定播放器要插入的对象！");
+                return;
+            }
+            if (typeof (opt.src) == "undefined") {
+                alert("请指定要播放视频的路径！");
+                return;
+            }
+            var _this = this;
+            _this.elemt = opt.elemt;                                       //播放器要插入的对象
+            _this.src = opt.src;                                           //视频的URL(必设)
+            _this.width = opt.width > 0 ? opt.width + "" : "100%";       //宽度(默认100%)
+            _this.height = opt.height > 0 ? opt.height + "" : "";    //高度(默认100%)
+            _this.autoplay = opt.autoplay == "false" ? "autoplay" : "";     //自动播放（true为自动播放）
+            _this.poster = opt.poster;                                     //视频封面，播放时的封面图片
+            _this.preload = opt.preload == "true" ? "preload" : "";        //预加载(true时启动加载)
+            _this.loop = opt.loop == "false" ? "loop" : "";                 //循环播放(true时循环播放)
+            var str = "<video controlslist='nodownload' playsinline -webkit-playsinline id='playVideo' controls ";                   //根据设置的属性的值，拼写video控件
+            str += " width='748' height='421' " + _this.autoplay + " " + _this.preload + " " + _this.loop + " ";
+            if (typeof (_this.poster) != "undefined") {
+                str += " poster='" + _this.poster + "' style='vertical-align: middle;border: 0;outline: none;' >";
+            } else {
+                str += " > ";
+            }
+            str += " <source src='" + _this.src + "' width='235' height='133'  type='video/mp4; codecs='avc1.42E01E, mp4a.40.2'' />";
+            str += "</video>";
+            _this.elemt.innerHTML = str;                                   //将str放到要插入的对象中
+            $('video').bind('contextmenu', function () { return false; });
+        }
+
+        $('.videoShow').on('click', function () {
+            var video = 'https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/images/about.mp4';
+            var emhtml = '<div  id="divVideo""></div>';
+            emhtml = emhtml + '<script type="text/javascript">';
+            emhtml = emhtml + ' playVideo({';
+            emhtml = emhtml + '   elemt: document.getElementById("divVideo"),';
+            emhtml = emhtml + '   src: "' + video + '",';
+            emhtml = emhtml + '   preload: "true",';
+            emhtml = emhtml + '   autoplay: "true",';
+            emhtml = emhtml + '   poster: "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/assets/images/video.jpg",';
+            emhtml = emhtml + '   loop: "true",';
+            emhtml = emhtml + '   width: "748",';
+            emhtml = emhtml + '   heigth:"421"';
+            emhtml = emhtml + ' });';
+            emhtml = emhtml + '<\/script>';
+
+            layer.open({
+                type: 1,
+                title: false,
+                area: ['748px', '421px'],
+                shade: 0.8,
+                closeBtn: 0,
+                shadeClose: true,
+                content: emhtml
+            });
+        });
+
+        var obj1 = {
+            el: $(".obj1"),
+            max: "90816",
+            start: 1 //增加开始的初始值
+        }
+        var obj2 = {
+            el: $(".obj2"),
+            max: "1150334",
+            start: 1 //增加开始的初始值
+        }
+        var obj3 = {
+            el: $(".obj3"),
+            max: "27468720",
+            start: 1 //增加开始的初始值
+        }
+
+        up(obj1);
+        up(obj2);
+        up(obj3);
+
+        function up(obj) {
+            var item = obj.el;
+            var num = obj.max;
+            var start = obj.start;
+
+            // 起始值
+            countNum: start
+            item.animate({
+                // 最终值
+                countNum: num
+            }, {
+                // 动画持续时间
+                duration: 2000,
+                easing: "linear",
+                step: function () {
+                    // 设置每步动画计算的数值
+                    item.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    // 设置动画结束的数值
+                    item.text(this.countNum);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        (function () {
+            $("img.lazyload").lazyload();
+            $('.zhiding').hide();//默认隐藏指定按钮
+            goTopEx(20);//返回顶部 参数为滚动速度
+        })();
+
+        // 右侧导航
+        function rightMenuShow(type) {
+            $('.rightMenu-show').hide();
+            $('.pop-menu0' + type).show();
+        }
+
+        function rightMenuHide() {
+            $('.rightMenu-show').hide();
+        }
+
+        //底部二维码
+        function qrcodeShow(type) {
+            $('.qrcode-img').hide();
+            $('.pop-img0' + type).show();
+        }
+
+        function qrcodeHide() {
+            $('.qrcode-img').hide();
+        }
+
+        //返回顶部效果
+        function goTopEx(num) {
+            var obj = document.getElementById("zhiding");
+            function getScrollTop() {
+                return $(window).scrollTop();
+            }
+            function setScrollTop(value) {
+                $(window).scrollTop(value);
+            }
+            //body往上滚动至600的距离 出现指定按钮
+            window.onscroll = function () { getScrollTop() > 600 ? obj.style.display = "block" : obj.style.display = "none"; }
+            obj.onclick = function () {
+                var goTop = setInterval(scrollMove, num);//滚动速度
+                function scrollMove() {
+                    setScrollTop(getScrollTop() / 1.1);
+                    if (getScrollTop() < 1) clearInterval(goTop);
+                }
+            }
+        }
+
+        //底部浮层
+        function showFooterForm() {
+            if ($('#colseFrom').hasClass('check-close')) {
+                $('#colseFrom').removeClass('check-close');
+                $('#colseFrom').addClass('check-open');
+                $(".footerForm").animate({ bottom: '-80px' }, 500);
+
+            } else {
+                $('#colseFrom').removeClass('check-open');
+                $('#colseFrom').addClass('check-close');
+                $(".footerForm").animate({ bottom: '0' }, 500);
+
+            }
+        }
+
+        function saveConsult() {
+            var userName = $('#userNameFrom').val();
+            var userPhone = $('#userPhoneFrom').val();
+
+            if (userName == '') {
+                layer.msg('请输入姓名');
+                return false;
+            }
+            if (!/^1[2|3|4|5|6|7|8|9][0-9]\d{8}$/.test(userPhone)) {
+                layer.msg('手机号填写错误!');
+                return false;
+            }
+
+            $.ajax({
+                url: 'https://www.jdwy.cn/api/home/consultSubmit',
+                type: 'post',
+                data: {
+                    sourceTxt: 'Jdwy浮层',
+                    userName: userName,
+                    userPhone: userPhone,
+                },
+                success: function (info) {
+                    if (info.code === 1) {
+                        layer.msg('提交成功，专业客服会尽快与您联系');
+                        setTimeout(function () {
+                            window.location.reload()
+                        }, 1000);
+                    } else {
+                        layer.msg(info.msg);
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
+</body>
+
+</html>
