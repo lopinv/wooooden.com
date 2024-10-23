@@ -494,10 +494,16 @@ section {
 	/* margin-right: 582px; */
 }
 
-.header ul li a {
+.header ul li {
 	width: 150px;
+	text-align: center;
 	display: block;
 }
+
+/* .header ul li a {
+	width: 150px;
+	display: block;
+} */
 
 .header ul li a em{
 	color: #f10000;
