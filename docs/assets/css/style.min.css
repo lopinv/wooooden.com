@@ -505,7 +505,8 @@ section {
 }
 
 .header-right{
-	width: 242px;
+	float: right;
+	width: 215px;
 	font-size: 20px;
 	color: #333333;
 	font-weight: bold;
