@@ -1,0 +1,69 @@
+baseURL = 'https://www.wooooden.com/'
+languageCode = 'zh-CN'
+title = '装配师'
+
+theme = 'huishou'
+
+enableRobotsTXT = true
+paginate = 5  #frontpage pagination
+preserveTaxonomyNames = true
+hasCJKLanguage = true
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+
+[permalinks]
+  posts = "/news/:slug/"
+
+[params]
+  # contentTypeName = "posts"
+  phoneNumber = '185-1668-7118'
+  companyName = '佳匠实业'
+  companyAddress = '上海市松江区石湖荡镇石湖新路95号'
+  companyStart = '2018'
+  companyBeian = '沪ICP备2021004498号'
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "product"
+    name = "产品中心"
+    url = "/product/"
+    weight = 2
+  [[menu.main]]
+    identifier = "case"
+    name = "案例中心"
+    url = "/case/"
+    weight = 3
+  [[menu.main]]
+    identifier = "esg"
+    name = "ESG理念"
+    url = "/esg/"
+    weight = 4
+  [[menu.main]]
+    identifier = "news"
+    name = "行业资讯"
+    url = "/news/"
+    weight = 5
+  [[menu.main]]
+    identifier = "about"
+    name = "关于我们"
+    url = "/about/"
+    weight = 6
+  [[menu.main]]
+    identifier = "kefu"
+    name = "联系我们"
+    url = "/kefu/"
+    weight = 7
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.125.0"
