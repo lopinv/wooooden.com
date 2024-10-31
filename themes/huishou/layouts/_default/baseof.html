@@ -36,7 +36,7 @@
 					</li>
 					{{ end }}
 				</ul>
-				<div class="header-right">电话：{{ .Site.Params.phoneNumber }}</div>
+				<div class="header-right">电话：{{ .Site.Params.company.Tel }}</div>
 			</header>
 		</div>
 
@@ -88,17 +88,17 @@
 							<li><a href="/help/?type=6" title="发展历程" target="_blank">发展历程</a></li>
 							<li><a href="/help/?type=7" title="展厅地址" target="_blank">展厅地址</a></li>
 							<li><a href="/help/?type=8" title="爱心公益" target="_blank">爱心公益</a></li>
-							<li><a href="/case/" title="服务案例" target="_blank">服务案例</a></li>
-							<li><a href="/esg/" title="ESG碳减排" target="_blank">ESG碳减排</a></li>
+							<li><a href="/case.html" title="服务案例" target="_blank">服务案例</a></li>
+							<li><a href="/esg.html" title="ESG碳减排" target="_blank">ESG碳减排</a></li>
 						</ul>
 						<ul class="nav ">
 							<li><b>产品种类</b></li>
-							<li><a href="/product/?type=2" title="工位/职员桌" target="_blank">工位/职员桌</a></li>
-							<li><a href="/product/?type=3" title="班台/经理桌" target="_blank">班台/经理桌</a></li>
-							<li><a href="/product/?type=1" title="办公椅/电脑椅" target="_blank">办公椅/电脑椅</a></li>
-							<li><a href="/product/?type=5" title="件柜/小推柜" target="_blank">文件柜/小推柜</a></li>
-							<li><a href="/product/?type=4" target="_blank">会议桌/洽谈桌</a></li>
-							<li><a href="/product/?type=6" title="件柜/小推柜" target="_blank">沙发/茶几</a></li>
+							<li><a href="/product.html?type=2" title="工位/职员桌" target="_blank">工位/职员桌</a></li>
+							<li><a href="/product.html?type=3" title="班台/经理桌" target="_blank">班台/经理桌</a></li>
+							<li><a href="/product.html?type=1" title="办公椅/电脑椅" target="_blank">办公椅/电脑椅</a></li>
+							<li><a href="/product.html?type=5" title="件柜/小推柜" target="_blank">文件柜/小推柜</a></li>
+							<li><a href="/product.html?type=4" target="_blank">会议桌/洽谈桌</a></li>
+							<li><a href="/product.html?type=6" title="件柜/小推柜" target="_blank">沙发/茶几</a></li>
 						</ul>
 						<ul class="nav ">
 							<li><b>服务支持</b></li>
@@ -109,11 +109,11 @@
 						</ul>
 						<ul class="nav ">
 							<li><b>资讯动态</b></li>
-							<li><a href="/news/?type=3" title="企业动态" target="_blank">企业动态</a></li>
-							<li><a href="/news/?type=4" title="市场资讯" target="_blank">市场资讯</a></li>
-							<li><a href="/news/?type=5" title="优惠活动" target="_blank">优惠活动</a></li>
-							<li><a href="/news/?type=6" title="好货推荐" target="_blank">好货推荐</a></li>
-							<li><a href="/news/?type=7" title="家具知识" target="_blank">家具知识</a></li>
+							<li><a href="/news.html?type=3" title="企业动态" target="_blank">企业动态</a></li>
+							<li><a href="/news.html?type=4" title="市场资讯" target="_blank">市场资讯</a></li>
+							<li><a href="/news.html?type=5" title="优惠活动" target="_blank">优惠活动</a></li>
+							<li><a href="/news.html?type=6" title="好货推荐" target="_blank">好货推荐</a></li>
+							<li><a href="/news.html?type=7" title="家具知识" target="_blank">家具知识</a></li>
 						</ul>
 						<div class="mode-link">
 							<div class="link-center"></div>
@@ -125,7 +125,7 @@
 								</a>
 							</p>
 							<p>全国统一服务热线</p>
-							<p>{{ .Site.Params.phoneNumber }}</p>
+							<p>{{ .Site.Params.company.Tel }}</p>
 							<p>（周一至周日 08:00-22:00）</p>
 							<p>关注我们</p>
 							<ul>
@@ -135,7 +135,7 @@
 									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wx-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
 									<div class="qrcode-img pop-img01">
-										<img src="https://qun.qq.com/qrcode/index?data=https%3A%2F%2Fu.wechat.com%2FEKP6dBfMFC_Cv38uRfdXgGQ%3Fs%3D2">
+										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Weixin }}">
 									</div>
 								</li>
 								<li onmousemove="qrcodeShow(2)" onmouseout="qrcodeHide()">
@@ -144,7 +144,7 @@
 									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wb-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
 									<div class="qrcode-img pop-img02">
-										<img src="https://qun.qq.com/qrcode/index?data=https%3A%2F%2Fu.wechat.com%2FEKP6dBfMFC_Cv38uRfdXgGQ%3Fs%3D2">
+										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Weibo }}">
 									</div>
 								</li>
 								<li onmousemove="qrcodeShow(3)" onmouseout="qrcodeHide()">
@@ -153,7 +153,7 @@
 									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-dy-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;">
 									<div class="qrcode-img pop-img03">
-										<img src="https://qun.qq.com/qrcode/index?data=https%3A%2F%2Fu.wechat.com%2FEKP6dBfMFC_Cv38uRfdXgGQ%3Fs%3D2">
+										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Douyin }}">
 									</div>
 								</li>
 							</ul>
@@ -186,10 +186,10 @@
 
 				<div class="copyright">
 					<div class="w1280 flexRC">
-						<p>中国 • 上海 & 装配狮 ©{{ .Site.Params.companyStart }}-{{ now.Year }}</p>
-						<p>&nbsp;|&nbsp;{{ .Site.Params.companyName }} 版权所有 {{ .Site.Params.companyAddress }} <a href="https://www.issem.cn" target="_blank">楚莺营销</a>提供网络营销技术支持&nbsp;|&nbsp;&nbsp;
+						<p>中国 • 上海 & 装配狮 ©{{ .Site.Params.company.Start }}-{{ now.Year }}</p>
+						<p>&nbsp;|&nbsp;{{ .Site.Params.company.Name }} 版权所有 {{ .Site.Params.company.Address }} <a href="https://www.issem.cn" target="_blank">楚莺营销</a>提供网络营销技术支持&nbsp;|&nbsp;&nbsp;
 						</p>
-						<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="external nofollow">{{ .Site.Params.companyBeian }}</a></p>
+						<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="external nofollow">{{ .Site.Params.company.Icp }}</a></p>
 					</div>
 				</div>
 			</footer>
@@ -206,7 +206,7 @@
 					<p>咨询热线</p>
 				</a>
 				<div class="rightMenu-show pop-menu01">
-					<p>{{ .Site.Params.phoneNumber }}</p>
+					<p>{{ .Site.Params.company.Tel }}</p>
 					<p>周一至周日 8:00-22:00</p>
 				</div>
 			</li>

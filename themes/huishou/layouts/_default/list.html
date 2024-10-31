@@ -62,34 +62,36 @@
                       </a>
                   </ul>
               </div>
+              {{ $paginator := .Paginate .Data.Pages }}
               <div class="box-content">
                   {{ range .Paginator.Pages }}
-                  {{ $content := .Content }}
-                  {{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
-                  {{ if $matches }}
-                      {{ $firstMatch := index $matches 0 }}
-                      {{ $imageUrl := replaceRE `^src="` "" $firstMatch }}
-                      {{ $imageUrl := replaceRE `"$` "" $imageUrl }}
-                        <a href="{{ .Permalink }}" target="_blank" title="{{ .LinkTitle }}">
-                            <dl>
-                                <dt style="background-image: url('{{ if $imageUrl }}{{ $imageUrl }}{{ else }}https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png{{ end }}')">
-                                </dt>
-                                <dd>
-                                    <p class="over1">{{ .LinkTitle }}</p>
-                                    <p class="">{{ .Summary | plainify }}</p>
-                                    <div class="item-bottom">
-                                        <object>
-                                            <a href="/news/" style="display:inline-block;"><span>企业动态</span></a>
-                                        </object>
-                                        {{ .Date.Format "2006-01-02" }}
-                                    </div>
-                                </dd>
-                            </dl>
-                        </a>
-                  {{ end }}
+                    {{ $content := .Content }}
+                    {{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
+                    {{ $imageUrl := "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
+                    {{ if $matches }}
+                        {{ $firstMatch := index $matches 0 }}
+                        {{ $imageUrl = replaceRE `^src="` "" $firstMatch }}
+                        {{ $imageUrl = replaceRE `"$` "" $imageUrl }}
+                    {{ end }}
+                    <a href="{{ .Permalink }}" target="_blank" title="{{ .LinkTitle }}">
+                        <dl>
+                            <dt style="background-image: url('{{ $imageUrl }})">
+                            </dt>
+                            <dd>
+                                <p class="over1">{{ .LinkTitle }}</p>
+                                <p class="">{{ .Summary | plainify }}</p>
+                                <div class="item-bottom">
+                                    <object>
+                                        <a href="/news.html" style="display:inline-block;"><span>企业动态</span></a>
+                                    </object>
+                                    {{ .Date.Format "2006-01-02" }}
+                                </div>
+                            </dd>
+                        </dl>
+                    </a>
                   {{ end }}
               </div>
-              <div id="goods-page"></div>
+              <div id="goods-page" data-total="{{ $paginator.TotalPages }}" data-limit="{{ $paginator.PagerSize }}" data-current-page="{{ $paginator.PageNumber }}"></div>
           </div>
       </div>
       <div class="box-right">
@@ -102,7 +104,7 @@
                   </ul>
               </div>
               <div class="right-list">
-                {{ $pages := .Site.RegularPages }}
+                {{ $pages := where .Site.RegularPages "Params.hidden" "!=" true }}
                 {{ $count := len $pages }}
                 {{ $numArticles := 5 }} <!-- 你可以根据需要调整显示的文章数量 -->
 
@@ -114,26 +116,27 @@
                 {{ end }}
 
                 {{ range $index := $randomIndices }}
-                {{ $page := index $pages $index }}
-                
-                {{ $content := $page.Content }}
-                {{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
-                {{ if $matches }}
-                    {{ $firstMatch := index $matches 0 }}
-                    {{ $imageUrl := replaceRE `^src="` "" $firstMatch }}
-                    {{ $imageUrl := replaceRE `"$` "" $imageUrl }}
-                <a href="{{ $page.Permalink }}" target="_blank" title="{{ $page.Title }}">
-                    <dl>
-                        <dt
-                            style="background-image: url('{{ if $imageUrl }}{{ $imageUrl }}{{ else }}https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png{{ end }}')">
-                        </dt>
-                        <dd>
-                            <p class="over2">{{ $page.Title }}</p>
-                            <p>{{ $page.Date.Format "2006-01-02" }}</p>
-                        </dd>
-                    </dl>
-                </a>
-                {{ end }}
+                    {{ $page := index $pages $index }}
+                    
+                    {{ $content := $page.Content }}
+                    {{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
+                    {{ $imageUrl := "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
+                    {{ if $matches }}
+                        {{ $firstMatch := index $matches 0 }}
+                        {{ $imageUrl = replaceRE `^src="` "" $firstMatch }}
+                        {{ $imageUrl = replaceRE `"$` "" $imageUrl }}
+                    {{ end }}
+                    <a href="{{ $page.Permalink }}" target="_blank" title="{{ $page.Title }}">
+                        <dl>
+                            <dt
+                                style="background-image: url('{{ $imageUrl }}')">
+                            </dt>
+                            <dd>
+                                <p class="over2">{{ $page.Title }}</p>
+                                <p>{{ $page.Date.Format "2006-01-02" }}</p>
+                            </dd>
+                        </dl>
+                    </a>
                 {{ end }}
               </div>
           </div>
