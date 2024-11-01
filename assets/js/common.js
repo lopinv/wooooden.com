@@ -27,15 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/*
+// 百度商桥代码
 var _hmt = _hmt || [];
-(function() {
-	var hm = document.createElement("script");
-	hm.src = "https://hm.baidu.com/hm.js?566b31777728579c3005d1e6318bdbae";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(hm, s);
+(function(){
+	var _token = ["566b31777728579c3005d1e6318bdbae"];
+	var _stat = "https://hm.baidu.com/hm.js?";
+	_token.forEach(function(token) { 
+		var script = document.createElement("script");
+		script.src = _stat + token;document.head.appendChild(script); 
+	});
 })();
 
+/*
 $(function() {
 	//点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
 	$(".shangqiao").click(function(event) {
