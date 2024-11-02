@@ -1,37 +1,51 @@
 {{ define "meta" }}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
-<meta name="keywords" content="{{- if .Keywords -}}{{ delimit .Keywords ", " }}{{ else }}{{ delimit .Params.tags ", " }}{{ end -}}" />
-<meta name="description" content="{{ .Summary | plainify}}" />
-{{ $content := .Content }}
-{{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
-{{ $imageUrl := "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
-{{ if $matches }}
-    {{ $firstMatch := index $matches 0 }}
-    {{ $imageUrl = replaceRE `^src="` "" $firstMatch }}
-    {{ $imageUrl = replaceRE `"$` "" $imageUrl }}
-{{ end }}
+<meta name="keywords" content="{{- with or .Keywords .Params.tags -}}{{ delimit . ", " }}{{- end -}}">
+<meta name="description" content="{{- .Description | default .Summary -}}">
+{{- $content := .Content }}
+{{- $matches := findRE `src="([^"]+)"` $content -1 }}
+{{- $imageUrls := slice }}
+{{- if $matches }}
+    {{- range $matches }}
+        {{- $extractedUrl := replaceRE `src="([^"]+)"` "${1}" . }}
+        {{- $image := "" }}
+        {{- if not (or (hasPrefix $extractedUrl "http://") (hasPrefix $extractedUrl "https://")) }}
+            {{- $baseUrl := .Site.BaseURL }}
+            {{- $image = printf "%s%s" $baseUrl $extractedUrl }}
+        {{- else }}
+            {{- $image = $extractedUrl }}
+        {{- end }}
+        {{- $imageUrls = $imageUrls | append $image }}
+    {{- end }}
+{{- else }}
+    {{- $imageUrls = $imageUrls | append "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
+{{- end }}
+{{- $imageUrl := "" }}
+{{- $imageUrl = index $imageUrls 0 }}
+{{/* 生成Open Graph协议（OGP）信息 */}}
 <meta property="og:locale" content="zh_CN" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:image" content="{{ $imageUrl }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:description" content="{{- .Description | default .Summary -}}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T13:14:15" }}+08:00" />
-<meta property="og:release_date" content="{{ .Date.Format "2006-01-02T13:14:15" }}+08:00" />
-<meta property="article:author" content="{{ with .Params.Author }}{{ . }}{{ end }}" />
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05" }}+08:00" />
+<meta property="og:release_date" content="{{ .Date.Format "2006-01-02T15:04:05" }}+08:00" />
+<meta property="article:author" content="{{- .Params.Author | default .Site.Params.Author.Name -}}" />
 <meta property="article:published_first" content="{{ .Site.Title }}, {{ .Permalink }}" />
-<meta property="og:author" content="{{ with .Params.Author }}{{ . }}{{ end }}" />
+<meta property="og:author" content="{{- .Params.Author | default .Site.Params.Author.Name -}}" />
 <meta property="article:publisher" content="https://www.lopins.cn" />
-<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T13:14:15" }}+08:00" />
-<meta property="bytedance:published_time" content="{{ .Date.Format "2006-01-02T13:14:15" }}+08:00" />
-<meta property="bytedance:updated_time" content="{{ .Lastmod.Format "2006-01-02T13:14:15" }}+08:00" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05" }}+08:00" />
+<meta property="bytedance:published_time" content="{{ .Date.Format "2006-01-02T15:04:05" }}+08:00" />
+<meta property="bytedance:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05" }}+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:site" content="@lopins" />
-<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="twitter:description" content="{{- .Description | default .Summary -}}" />
 <meta name="twitter:image" content="{{ $imageUrl }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
+{{/* 生成包含多张图片的JSON-LD */}}
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -42,40 +56,48 @@
                 "url": "{{ .Permalink }}",
                 "name": "{{ .Title }}",
                 "isPartOf": {
-                    "@id": "{{ .Site.BaseURL | absURL }}#website"
+                    "@id": "{{ .Site.BaseURL | absLangURL }}#website"
                 },
                 "primaryImageOfPage": {
                     "@id": "{{ .Permalink }}#primaryimage"
                 },
-                "image": {
-                    "@id": "{{ .Permalink }}#primaryimage"
-                },
-                "thumbnailUrl": "{{ $imageUrl }}",
-                "datePublished": "{{ .Date.Format "2006-01-02T13:14:15" }}+08:00",
-                "dateModified": "{{ .Lastmod.Format "2006-01-02T13:14:15" }}+08:00",
-                "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}",
+                "image": [
+                    {{- $page := . }}
+                    {{- range $index, $imageUrl := $imageUrls }}
+                        {{ if ne $index 0 }},{{ end }}
+                        {
+                            "@id": "{{ $page.Permalink }}#image{{ $index }}",
+                            "url": "{{ $imageUrl }}"
+                        }
+                    {{- end }}
+                ],
+                "thumbnailUrl": "{{ with $imageUrls }}{{ index $imageUrls 0 }}{{ end }}",
+                "datePublished": "{{ .Date.Format "2006-01-02T15:04:05" }}+08:00",
+                "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05" }}+08:00",
+                "description": "{{ .Description | default .Summary }}",
                 "breadcrumb": {
                     "@id": "{{ .Permalink }}#breadcrumb"
                 },
-                "inLanguage": "zh_CN",
+                "inLanguage": "zh-CN",
                 "potentialAction": [
                     {
                         "@type": "ReadAction",
-                        "target": [
-                            "{{ .Permalink }}"
-                        ]
+                        "target": ["{{ .Permalink }}"]
                     }
                 ]
             },
-            {
-                "@type": "ImageObject",
-                "inLanguage": "zh_CN",
-                "@id": "{{ .Permalink }}#primaryimage",
-                "url": "{{ $imageUrl }}",
-                "contentUrl": "{{ $imageUrl }}",
-                "width": 2400,
-                "height": 1350
-            },
+            {{- $page := . }}
+            {{- range $index, $imageUrl := $imageUrls }}
+                {
+                    "@type": "ImageObject",
+                    "inLanguage": "zh-CN",
+                    "@id": "{{ $page.Permalink }}#image{{ $index }}",
+                    "url": "{{ $imageUrl }}",
+                    "contentUrl": "{{ $imageUrl }}",
+                    "width": 2400,
+                    "height": 1350
+                }{{ if lt $index (sub (len $imageUrls) 1) }},{{ end }}
+            {{- end }},
             {
                 "@type": "BreadcrumbList",
                 "@id": "{{ .Permalink }}#breadcrumb",
@@ -84,13 +106,13 @@
                         "@type": "ListItem",
                         "position": 1,
                         "name": "首页",
-                        "item": "{{ .Site.BaseURL | absURL }}"
+                        "item": "{{ .Site.BaseURL | absLangURL }}"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "行业资讯",
-                        "item": "{{ .Site.BaseURL | absURL }}news.html"
+                        "item": "{{ "/news" | absLangURL }}"
                     },
                     {
                         "@type": "ListItem",
@@ -102,19 +124,19 @@
             },
             {
                 "@type": "WebSite",
-                "@id": "{{ .Site.BaseURL | absURL }}#website",
-                "url": "{{ .Site.BaseURL | absURL }}",
+                "@id": "{{ .Site.BaseURL | absLangURL }}#website",
+                "url": "{{ .Site.BaseURL | absLangURL }}",
                 "name": "{{ .Site.Title }}",
-                "description": "{{ .Site.Params.description }}",
+                "description": "{{ .Description | default .Summary }}",
                 "publisher": {
-                    "@id": "{{ .Site.BaseURL | absURL }}#organization"
+                    "@id": "{{ .Site.BaseURL | absLangURL }}#organization"
                 },
                 "potentialAction": [
                     {
                         "@type": "SearchAction",
                         "target": {
                             "@type": "EntryPoint",
-                            "urlTemplate": "{{ .Site.BaseURL | absURL }}?s={search_term_string}"
+                            "urlTemplate": "{{ printf "%s/search/{search_term_string}" (.Site.BaseURL | absLangURL) }}"
                         },
                         "query-input": {
                             "@type": "PropertyValueSpecification",
@@ -123,23 +145,20 @@
                         }
                     }
                 ],
-                "inLanguage": "zh_CN",
+                "inLanguage": "zh-CN",
                 "copyrightHolder": {
-                    "@id": "{{ .Site.BaseURL | absURL }}#organization"
+                    "@id": "{{ .Site.BaseURL | absLangURL }}#organization"
                 }
             },
             {
-                "@type": [
-                    "Organization",
-                    "Brand"
-                ],
-                "@id": "{{ .Site.BaseURL | absURL }}#organization",
+                "@type": ["Organization", "Brand"],
+                "@id": "{{ .Site.BaseURL | absLangURL }}#organization",
                 "name": "{{ .Site.Params.company.Name }}",
-                "url": "{{ .Site.BaseURL | absURL }}",
+                "url": "{{ .Site.BaseURL | absLangURL }}",
                 "logo": {
                     "@type": "ImageObject",
-                    "inLanguage": "zh_CN",
-                    "@id": "{{ .Site.BaseURL | absURL }}#/schema/logo/image/",
+                    "inLanguage": "zh-CN",
+                    "@id": "{{ .Site.BaseURL | absLangURL }}/schema/logo/image/",
                     "url": "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png",
                     "contentUrl": "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png",
                     "width": 453,
@@ -147,11 +166,11 @@
                     "caption": "{{ .Site.Params.company.Name }}"
                 },
                 "image": {
-                    "@id": "{{ .Site.BaseURL | absURL }}#/schema/logo/image/"
+                    "@id": "{{ .Site.BaseURL | absLangURL }}/schema/logo/image/"
                 },
                 "sameAs": [
                     "https://www.wooooden.com/",
-                    "https://www.issem.cn/",
+                    "https://www.issem.cn/"
                 ],
                 "numberOfEmployees": 999,
                 "founder": {
@@ -198,13 +217,13 @@
                       <li>首页</li>
                   </a>
                   <li style="padding: 0 5px"> > </li>
-                  <a href="/news.html">
+                  <a href="{{ "/news.html" | absLangURL }}">
                       <li>行业资讯</li>
                   </a>
                   {{ range .Params.categories }}
                   <li style="padding: 0 5px"> > </li>
-                    <a href="{{ "categories/" | absURL }}{{ .slug | urlize }}">
-                        <li>{{ .name }}</li>
+                    <a href="{{ "categories/" | absLangURL }}{{ . | urlize }}.html">
+                        <li>{{ . }}</li>
                     </a>
                   {{ end }}
                   <li style="padding: 0 5px"> > </li>
@@ -220,9 +239,10 @@
               <h1 class="info-title">{{ .Title }}</h1>
               <div class="part3-news-screen">
                   <ul>
-                        {{- if .Date -}}<li>发布时间：{{- .Date.Format "2006-01-02" -}}{{- if $.Site.Params.showLastUpdated -}}{{- .Lastmod.Format "2006-01-02" -}}{{- end -}}</li>{{- end -}}
-                        {{- with .Params.Author -}}<li>作者：{{ . }}</li>{{- end -}}
-                        <li>{{ range .Params.tags }}#<a href="{{ (urlize (printf "tag/%s/" .slug)) | absLangURL }}" title="{{ .name }}">{{ .name }}</a>&nbsp;{{ end }}</li>
+                        {{- if .Date -}}<li>时间：{{- .Date.Format "2006-01-02" -}}</li>{{- end -}}
+                        <li>作者：{{- .Params.Author | default .Site.Params.Author.Name -}}</li>
+                        <li>预估：{{ .ReadingTime }}分钟</li>
+                        <li>{{ range .Params.tags }}#<a href="{{ "tags/" | absLangURL }}{{ . | urlize }}.html" title="{{ . }}">{{ . }}</a>&nbsp;{{ end }}</li>
                   </ul>
               </div>
               <div class="info-remark">
@@ -268,12 +288,17 @@
                         {{ with (where .Site.RegularPages "Params.hidden" "!=" true).Related $opts | first 5 }}
                         {{ range . }}
                             {{ $content := .Content }}
-                            {{ $matches := findRE `src="(https?://[^\"]+)"` $content -1 }}
+                            {{ $matches := findRE `src="([^"]+)"` $content -1 }}
                             {{ $imageUrl := "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
                             {{ if $matches }}
                                 {{ $firstMatch := index $matches 0 }}
-                                {{ $imageUrl = replaceRE `^src="` "" $firstMatch }}
-                                {{ $imageUrl = replaceRE `"$` "" $imageUrl }}
+                                {{ $extractedUrl := replaceRE `src="([^"]+)"` "${1}" $firstMatch }}
+                                {{ if not (or (hasPrefix $extractedUrl "http://") (hasPrefix $extractedUrl "https://")) }}
+                                    {{ $baseUrl := .Site.BaseURL }}
+                                    {{ $imageUrl = printf "%s%s" $baseUrl $extractedUrl }}
+                                {{ else }}
+                                    {{ $imageUrl = $extractedUrl }}
+                                {{ end }}
                             {{ end }}
                             <a href="{{ .Permalink }}" target="_blank" title="{{ .Title }}">
                                 <dl>

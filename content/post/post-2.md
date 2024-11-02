@@ -1,22 +1,16 @@
 +++
-title = '大型企业适合采购二手办公家具吗?'
+title = "大型企业适合采购二手办公家具吗?"
 date = 2024-10-10T10:26:00+08:00
 author = "lopins"
-keywords = ['二手办公家具' , '二手办公桌椅', '采购二手办公家具']
-description = '由于企业成本控制、环保意识增强等，大型企业也开始选择二手办公家具来满足发展的需求。'
-categories = [
-  { name = "行业常识", slug = "knowledge" }
-]
-tags = [
-    { name = "二手办公家具", slug = "second-hand-office-furniture" },
-    { name = "二手办公桌椅", slug = "second-hand-office-desks-and-chairs" },
-    { name = "采购二手办公家具", slug = "purchase-second-hand-office-furniture" }
-]
-readingTime = false
-hideComments = false
+keywords = ["二手办公家具", "二手办公桌椅", "采购二手办公家具"]
+description = "由于企业成本控制、环保意识增强等，大型企业也开始选择二手办公家具来满足发展的需求。"
+categories = ["行业常识"]
+tags = ["二手办公家具","二手办公桌椅","二手办公桌椅","员工办公桌"]
+readingTime = true
+hideComments = true
 isCJKLanguage = true
 draft = false
-slug = 'this-is-demo-data-preview-2?'
+slug = "this-is-demo-data-preview-2?"
 +++
 
 由于企业成本控制、环保意识增强等，大型企业也开始选择二手办公家具来满足发展的需求。但是大企是否适合采购二手办公家具，主要取决于以下几个因素：

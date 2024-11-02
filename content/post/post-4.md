@@ -1,22 +1,16 @@
 +++
-title = '企业采购员工办公桌工位该注意哪些方面？'
+title = "企业采购员工办公桌工位该注意哪些方面？"
 date = 2024-10-10T10:26:00+08:00
 author = "lopins"
-keywords = ['二手办公家具' , '二手办公桌椅', '员工办公桌']
-description = '选择员工工位时，需要综合考虑多种因素以确保员工的舒适度、工作效率以及团队协作效果。'
-categories = [
-  { name = "行业常识", slug = "knowledge" }
-]
-tags = [
-    { name = "二手办公家具", slug = "second-hand-office-furniture" },
-    { name = "二手办公桌椅", slug = "second-hand-office-desks-and-chairs" },
-    { name = "员工办公桌", slug = "employee-desk" }
-]
-readingTime = false
-hideComments = false
+keywords = ["二手办公家具", "二手办公桌椅", "员工办公桌"]
+description = "选择员工工位时，需要综合考虑多种因素以确保员工的舒适度、工作效率以及团队协作效果。"
+categories = ["行业常识"]
+tags = ["二手办公家具","二手办公桌椅","二手办公桌椅","员工办公桌"]
+readingTime = true
+hideComments = true
 isCJKLanguage = true
 draft = false
-slug = 'this-is-demo-data-preview-4?'
+slug = "this-is-demo-data-preview-4?"
 +++
 
 选择员工工位时，需要综合考虑多种因素以确保员工的舒适度、工作效率以及团队协作效果。以下是一些关键因素和建议：

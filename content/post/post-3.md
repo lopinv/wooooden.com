@@ -1,21 +1,16 @@
 +++
-title = '买二手人体工学椅需要注意哪些方面？'
+title = "买二手人体工学椅需要注意哪些方面？"
 date = 2024-10-10T10:26:00+08:00
 author = "lopins"
-keywords = ['二手办公家具' , '二手办公桌椅', '人体工学椅']
-description = '在购买二手人体工学椅时，除了遵循一般的人体工学椅选购原则外，还需要额外注意以下几点，以避免潜在的问题和风险。'
-categories = [
-  { name = "行业常识", slug = "knowledge" }
-]
-tags = [
-    { name = "二手办公家具", slug = "second-hand-office-furniture" },
-    { name = "二手办公桌椅", slug = "second-hand-office-desks-and-chairs" },
-    { name = "人体工学椅", slug = "ergonomic-chair" }
-]
-readingTime = false
-hideComments = false
+keywords = ["二手办公家具", "二手办公桌椅", "人体工学椅"]
+description = "在购买二手人体工学椅时，除了遵循一般的人体工学椅选购原则外，还需要额外注意以下几点，以避免潜在的问题和风险。"
+categories = ["行业常识"]
+tags = ["二手办公家具","二手办公桌椅","二手办公桌椅","员工办公桌"]
+readingTime = true
+hideComments = true
+isCJKLanguage = true
 draft = false
-slug = 'this-is-demo-data-preview-3?'
+slug = "this-is-demo-data-preview-3?"
 +++
 
 ![1716348704818367.jpeg](https://www.jdwy.cn/Upload/ueditor/image/20240522/1716348704818367.jpeg)
