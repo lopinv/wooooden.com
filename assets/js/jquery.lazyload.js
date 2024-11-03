@@ -4,7 +4,7 @@
 		var elements = this;
 		var $container;
 		var settings = {
-			placeholder: "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png",  // 预加载前显示的图片
+			placeholder: "https://gitee.com/lopins/wooooden.com/raw/gh-pages/static/assets/images/logo.png",  // 预加载前显示的图片
 			threshold: 20,// 提前开始加载,值为数字,代表页面高度
 			failure_limit: 15,
 			event: "scroll",
