@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /index
 Disallow: /*/page/1/
+Disallow: /kefu.html
 
 Sitemap: {{ "sitemap.xml" | absLangURL }}

@@ -3,15 +3,22 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-	<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+	<link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/favicon.png">
+	<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/favicon.svg">
 	<meta name="applicable-device" content="pc" />
 	{{ hugo.Generator }}
+	<link rel='dns-prefetch' href='//cdn.bootcdn.net' />
+	<link rel='dns-prefetch' href='//hm.baidu.com' />
+	<link rel='dns-prefetch' href='//zz.bdstatic.com' />
+	<link rel='dns-prefetch' href='//gitee.com' />
+	<link rel='dns-prefetch' href='//static.cloudflareinsights.com' />
+	<link rel='dns-prefetch' href='//www.wooooden.com' />
+	<meta name="referrer" content="no-referrer">
 	{{ block "meta" . }}{{ end }}
-	<link href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/css/style.min.css" rel="stylesheet">
+	<link href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/style.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcdn.net/ajax/libs/Swiper/6.6.2/swiper-bundle.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcdn.net/ajax/libs/layui/2.7.6/css/layui.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/css/animate.min.css"  rel="stylesheet"/>
+	<link href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/animate.min.css"  rel="stylesheet"/>
   	{{ block "headscript" . }}{{ end }}
 </head>
 
@@ -23,7 +30,7 @@
 			<header>
 				{{ if eq .IsHome true }}<h1 class="header-left">{{ else }}<div class="header-left">{{ end }}
 					<a href="{{ .Site.BaseURL | absLangURL }}" title="{{- .Site.Params.title -}}" target="_blank">
-						<img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" alt="" style="width: 100%">
+						<img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" alt="" style="width: 100%">
 					</a>
 				{{ if eq .IsHome true }}</h1>{{ else }}</div>{{ end }}
 				<ul class="navHref">
@@ -35,7 +42,12 @@
 					</li>
 					{{ end }}
 				</ul>
-				<div class="header-right">电话：{{ .Site.Params.company.Tel }}</div>
+				<div class="header-right" onmousemove="qrcodeShow(1)" onmouseout="qrcodeHide()">
+					电话：{{ .Site.Params.company.Tel }}
+					<!-- <div class="qrcode-img pop-img01">
+						<img src="https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text={{ .Site.Params.company.Weibo }}" alt="微信二维码">
+					</div> -->
+				</div>
 			</header>
 		</div>
 
@@ -49,28 +61,28 @@
 				<div class="footer-guarantee">
 					<div class="w1280 flexRC" style="border-bottom: 1px solid #bfbfbf;">
 						<dl>
-							<dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/footer-bz1.png" alt="全国连锁"></dt>
+							<dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/footer-bz1.png" alt="全国连锁"></dt>
 							<dd>
 								<p>全国连锁</p>
 								<p>全国13家分公司</p>
 							</dd>
 						</dl>
 						<dl>
-							<dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/footer-bz2.png" alt="专业服务"></dt>
+							<dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/footer-bz2.png" alt="专业服务"></dt>
 							<dd>
 								<p>专业服务</p>
 								<p>15年成熟服务经验</p>
 							</dd>
 						</dl>
 						<dl>
-							<dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/footer-bz3.png" alt="现货仓储"></dt>
+							<dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/footer-bz3.png" alt="现货仓储"></dt>
 							<dd>
 								<p>现货仓储</p>
 								<p>全国近10万平仓储面积</p>
 							</dd>
 						</dl>
 						<dl>
-							<dt><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/footer-bz4.png" alt="国内外名企回收货源"></dt>
+							<dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/footer-bz4.png" alt="国内外名企回收货源"></dt>
 							<dd style="width: 160px;">
 								<p>品质货源</p>
 								<p>国内外名企回收货源</p>
@@ -80,7 +92,7 @@
 				</div>
 				<div class="footer-mode flexRC">
 					<div class="w1280 flexR" style="padding-top: 45px;">
-						<!--<div class="logo flexCC"><a href="/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png"></a></div>-->
+						<!--<div class="logo flexCC"><a href="/" target="_blank"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png"></a></div>-->
 						<ul class="nav ">
 							<li><b>认识我们</b></li>
 							<li><a href="/help/?type=5" title="关于我们" target="_blank">关于我们</a></li>
@@ -120,7 +132,7 @@
 						<div class="contact ">
 							<p>
 								<a href="/" target="_blank">
-									<img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" style="width: 180px;">
+									<img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" style="width: 180px;">
 								</a>
 							</p>
 							<p>全国统一服务热线</p>
@@ -129,35 +141,35 @@
 							<p>关注我们</p>
 							<ul>
 								<li onmousemove="qrcodeShow(1)" onmouseout="qrcodeHide()">
-									<img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wx-no.png"
+									<img class="qrcode-no" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-wx-no.png"
 										style="width:32px;height:32px;cursor: pointer;padding-right: 30px">
-									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wx-yes.png"
+									<img class="qrcode-yes" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-wx-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
 									<div class="qrcode-img pop-img01">
-										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Weixin }}">
+										<img src="https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text={{ .Site.Params.company.Weixin }}">
 									</div>
 								</li>
 								<li onmousemove="qrcodeShow(2)" onmouseout="qrcodeHide()">
-									<img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wb-no.png"
+									<img class="qrcode-no" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-wb-no.png"
 										style="width:32px;height:32px;cursor: pointer;padding-right: 30px">
-									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-wb-yes.png"
+									<img class="qrcode-yes" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-wb-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;padding-right: 30px">
 									<div class="qrcode-img pop-img02">
-										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Weibo }}">
+										<img src="https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text={{ .Site.Params.company.Weibo }}">
 									</div>
 								</li>
 								<li onmousemove="qrcodeShow(3)" onmouseout="qrcodeHide()">
-									<img class="qrcode-no" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-dy-no.png"
+									<img class="qrcode-no" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-dy-no.png"
 										style="width:32px;height:32px;cursor: pointer;">
-									<img class="qrcode-yes" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/ico-dy-yes.png"
+									<img class="qrcode-yes" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/ico-dy-yes.png"
 										style="width:32px;height:32px;cursor: pointer;display:none;">
 									<div class="qrcode-img pop-img03">
-										<img src="https://qun.qq.com/qrcode/index?data={{ .Site.Params.company.Douyin }}">
+										<img src="https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text={{ .Site.Params.company.Douyin }}">
 									</div>
 								</li>
 							</ul>
 						</div>
-						<!--<div class="attention"><img src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/wx.png" >关注公众号</div>-->
+						<!--<div class="attention"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/wx.png" >关注公众号</div>-->
 					</div>
 				</div>
 
@@ -199,8 +211,8 @@
 			<li onmousemove="rightMenuShow(1)" onmouseout="rightMenuHide()">
 				<a href="javascript:void (0)" title="">
 					<span class="maximg">
-						<img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-01.png" style="height: 100%;" />
-						<img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-on-01.png" style="height: 100%;" />
+						<img class="img1" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-01.png" style="height: 100%;" />
+						<img class="img2" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-on-01.png" style="height: 100%;" />
 					</span>
 					<p>咨询热线</p>
 				</a>
@@ -212,8 +224,8 @@
 			<li>
 				<a href="javascript:void (0)" title="" class="shangqiao">
 					<span class="maximg">
-						<img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-03.png" />
-						<img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-on-03.png" />
+						<img class="img1" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-03.png" />
+						<img class="img2" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-on-03.png" />
 					</span>
 					<p>联系客服</p>
 				</a>
@@ -221,8 +233,8 @@
 			<!--<li style="display: none">-->
 			<!--<a >-->
 			<!--<span class="maximg">-->
-			<!--<img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-04.png" />-->
-			<!--<img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-on-04.png" />-->
+			<!--<img class="img1" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-04.png" />-->
+			<!--<img class="img2" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-on-04.png" />-->
 			<!--</span>-->
 			<!--<p>批量采购</p>-->
 			<!--</a>-->
@@ -230,8 +242,8 @@
 			<li class="zhiding" id="zhiding">
 				<a href="javascript:void(0)" title="">
 					<span class="maximg">
-						<img class="img1" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-05.png" />
-						<img class="img2" alt="" src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/picture/rightnav-on-05.png" />
+						<img class="img1" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-05.png" />
+						<img class="img2" alt="" src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/rightnav-on-05.png" />
 					</span>
 					<p>回到顶部</p>
 				</a>
@@ -258,13 +270,13 @@
 	<script>var layer = layui.layer,element = layui.element,form = layui.form;</script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/6.6.2/swiper-bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/js/jquery.lazyload.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/js/scrollreveal.js"></script>
+	<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/jquery.lazyload.js"></script>
+	<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/scrollreveal.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.7.2/axios.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/js/area.js"></script>
+	<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/area.js"></script>
 	{{ block "footscript" . }}{{ end }}
-  	<script src="https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/js/common.js"></script>
+  	<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/common.js"></script>
 	<!-- wooooden.com Cloudflare Web Analytics -->
 	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4a6ed7a92e5848bfacd805afc2f2abc8"}'></script>
 	<!-- End Cloudflare Web Analytics -->

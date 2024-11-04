@@ -1,34 +1,35 @@
-var vm = new Vue({
-	el: '#content',
-	data: {
-		faIdx: 1, // 方案
-		case_item_idx:'5_0'
-	},
-	created() {
-		// if (/Android|webOS| iPhone | iPad | iPod |BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i
-		// 	.test(navigator.userAgent)) {
-		// 	//window.location.href = "/wap/index";
-		// }
-	},
-	mounted () {
-		// 页面一加载完成就执行getList方法
-		// this.getProductList(); //方案
-		// this.getCaseList(); //案例
-	},
-	methods: {
-		// 方案
-		clickFa: function(i) {
-			this.faIdx = i;
-			// $(".scheme_right img.lazyload").lazyload();
+// document.addEventListener('DOMContentLoaded', function () {
+	var vm = new Vue({
+		el: '#content',
+		data: {
+			faIdx: 1, // 方案
+			case_item_idx:'5_0'
 		},
-		// 案例场景
-		clickCase: function(index) {
-			this.case_item_idx = index;
-			// $(".case-box img.lazyload").lazyload();
+		created() {
+			// if (/Android|webOS| iPhone | iPad | iPod |BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i
+			// 	.test(navigator.userAgent)) {
+			// 	//window.location.href = "/wap/index";
+			// }
+		},
+		mounted () {
+			// 页面一加载完成就执行getList方法
+			// this.getProductList(); //方案
+			// this.getCaseList(); //案例
+		},
+		methods: {
+			// 方案
+			clickFa: function(i) {
+				this.faIdx = i;
+				// $(".scheme_right img.lazyload").lazyload();
+			},
+			// 案例场景
+			clickCase: function(index) {
+				this.case_item_idx = index;
+				// $(".case-box img.lazyload").lazyload();
+			}
 		}
-	}
-});
-
+	});
+// });
 // 轮播
 var swiper = new Swiper('.carousel', {
 	autoplay: true,

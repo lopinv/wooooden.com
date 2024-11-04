@@ -1,0 +1,1064 @@
+{{ define "meta" }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<meta name="keywords" content="{{- with or .Keywords .Params.tags -}}{{ delimit . ", " }}{{- end -}}">
+<meta name="description" content="{{- .Description | default .Summary -}}">
+{{ end }}
+
+{{ define "headscript" }}
+<link rel="stylesheet" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/about.css">
+<link rel="stylesheet" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/certify.css">
+<script>window.location.assign('{{ .Site.Params.company.Kefu }}');</script>
+{{ end }}
+
+{{ define "main" }}
+<section id="content" v-cloak>
+    <!--banner-->
+    <div class="banner-about">
+        <div class="w1280">
+            <div class="about-banner-box" data-scroll-reveal="wait 0.2s, then enter left and move 50px over 2s">
+                <!-- <div class="box-logo"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/logo.png"></div> -->
+                <div class="box-title" >
+                    与您一起<br>低碳减排 绿色办公
+                    <em></em>
+                </div>
+                <div class="box-number">
+                    <dl>
+                        <dt class="obj1">90816<em>家</em></dt>
+                        <dd>客户合作数</dd>
+                    </dl>
+                    <dl>
+                        <dt class="obj2">1150334<em>件</em></dt>
+                        <dd>循环家具数</dd>
+                    </dl>
+                    <dl>
+                        <dt class="obj3">27468720<em>kg</em></dt>
+                        <dd>合计减碳值</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--企业介绍-->
+    <div class="brand-intro">
+        <div class="intro-box w1280">
+            <div class="intro-title wow fadeInDown">
+                品牌办公家具循环利用引导者
+            </div>
+            <div class="intro-content wow fadeInUp"  data-wow-delay="0.1s">
+                装配师成立于上海，专注于中高档品牌二手办公家具的回收、销售、租赁、拆装、运输、翻新、<br>
+                仓储及捐赠等业务，提供二手办公家具评估、工地测量、摆放设计、清洗、安装、维修等服务。<br>
+                公司采用线下连锁展厅仓储销售与线上网络服务相结合的经营模式。<br>
+                现已成立北京、上海（青浦/浦东/闵行）、广州、深圳、天津、武汉、杭州、成都、重庆、香港、长沙，<br>
+                13大公司，拥有近10万平米展厅+仓储面积，是国内专业的二手办公家具服务商。<br>
+            </div>
+            <div class="intro-video videoShow  wow zoomIn"  data-wow-delay="0.1s">
+                观看视频<img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/btn-video.png">
+            </div>
+        </div>
+    </div>
+
+    <!--站点展厅-->
+    <div class="zt-site">
+        <div class="w1280">
+            <div class="layout-tilte wow fadeInDown">
+                <p>展厅实景</p>
+                <p></p>
+            </div>
+            <div class="site-box wow fadeInUp" data-wow-delay="0.1s">
+                <div class="zt-nav">
+                    <ul>
+                        <li class=" " @click="clickSiteTab('0')">
+                            <span :class="{'active':site_tab_idx ==  '0'}">北京李桥店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('12')">
+                            <span :class="{'active':site_tab_idx ==  '12'}">北京双桥店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('1')">
+                            <span :class="{'active':site_tab_idx ==  '1'}">上海青浦店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('2')">
+                            <span :class="{'active':site_tab_idx ==  '2'}">上海浦东店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('3')">
+                            <span :class="{'active':site_tab_idx ==  '3'}">上海闵行店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('13')">
+                            <span :class="{'active':site_tab_idx ==  '13'}">上海金桥店</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('4')">
+                            <span :class="{'active':site_tab_idx ==  '4'}">广州</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('5')">
+                            <span :class="{'active':site_tab_idx ==  '5'}">深圳</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('6')">
+                            <span :class="{'active':site_tab_idx ==  '6'}">天津</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('7')">
+                            <span :class="{'active':site_tab_idx ==  '7'}">武汉</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('8')">
+                            <span :class="{'active':site_tab_idx ==  '8'}">杭州</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('9')">
+                            <span :class="{'active':site_tab_idx ==  '9'}">成都</span>
+                        </li>
+                        <li class=" " @click="clickSiteTab('11')">
+                            <span :class="{'active':site_tab_idx ==  '11'}">香港</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==0">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[0].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[0].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[0].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[0].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[0].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==12">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[12].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[12].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[12].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[12].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[12].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==1">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[1].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[1].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[1].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[1].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[1].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==2">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[2].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[2].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[2].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[2].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[2].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==3">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[3].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[3].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[3].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[3].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[3].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==13">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[13].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[13].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[13].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[13].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[13].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==4">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[4].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[4].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[4].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[4].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[4].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==5">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[5].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[5].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[5].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[5].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[5].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==6">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[6].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[6].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[6].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[6].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[6].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==7">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[7].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[7].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[7].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[7].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[7].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==8">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[8].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[8].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[8].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[8].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[8].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==9">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[9].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[9].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[9].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[9].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[9].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==10">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[10].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[10].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[10].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[10].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[10].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+                <div class="zt-intro" v-show="site_tab_idx==11">
+                    <ul>
+                        <li>{{ "{{" }}site_content_list[11].city{{ "}}" | safeHTML }}</li>
+                        <li>面积：{{ "{{" }}site_content_list[11].area{{ "}}" | safeHTML }}m²</li>
+                        <li>公司地址：{{ "{{" }}site_content_list[11].address{{ "}}" | safeHTML }}</li>
+                        <li><span  class="shangqiao">立即预约上门</span><span><a :href="site_content_list[11].url" target="_blank" style="color: #ffffff;">了解更多详情</a></span></li>
+                    </ul>
+                    <div class="intro-img">
+                        <div class="swiper-container swiper-site">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(zt,index) in site_content_list[11].imgs">
+                                    <img :src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15b1e1c8fa8347a993d3ebe46f9eaea4.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-site"></div>
+                        <div class="swiper-button-prev swiper-prev-site"></div>
+                        <div class="swiper-button-next swiper-next-site"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--企业文化-->
+    <div class="qywh">
+        <div class="w1280">
+            <div class="layout-tilte wow fadeInDown" data-wow-offset="100">
+                <p style="color: #ffffff !important;">企业文化</p>
+                <p style="border: 2px solid #ffffff;"></p>
+            </div>
+            <div class="qywh-box  wow fadeInUp">
+                <div class="swiper-container swiper-qywh">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                            <div class="slide-content">
+                                <div class="slide-content-left">
+                                    <div><em></em>企业使命</div>
+                                    <div>为客户降低成本<br>为社会节约资源<br>为环境减少排放</div>
+                                </div>
+                                <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/qywh1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="slide-content">
+                                <div class="slide-content-left">
+                                    <div><em></em>企业愿景</div>
+                                    <div>打造全球循环家具第一品牌！</div>
+                                </div>
+                                <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/qywh2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="slide-content">
+                                <div class="slide-content-left">
+                                    <div><em></em>经营理念</div>
+                                    <div>引领行业发展<br>注重客户体验<br>帮助员工成长</div>
+                                </div>
+                                <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/qywh3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="slide-content">
+                                <div class="slide-content-left">
+                                    <div><em></em>企业价值观</div>
+                                    <div>和：人和意合，家和业兴<br>善：善心善念，善行善果<br>专：专心专注，专业专才<br>勤：勤奋努力，勤俭节约</div>
+                                </div>
+                                <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/qywh4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="slide-content">
+                                <div class="slide-content-left">
+                                    <div><em></em>服务理念</div>
+                                    <div>持续为客户创造惊喜！<br>为企业提供注重经济和环境<br>双重效益的循环办公家具解<br>决方案！</div>
+                                </div>
+                                <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/qywh5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-solid">
+                    <div class="swiper-container solid-qywh">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide " >
+                                <em></em>
+                                <em></em>
+                                <span>企业使命</span>
+                            </div>
+                            <div class="swiper-slide " >
+                                <em></em>
+                                <em></em>
+                                <span>企业愿景</span>
+                            </div>
+                            <div class="swiper-slide " >
+                                <em></em>
+                                <em></em>
+                                <span>经营理念</span>
+                            </div>
+                            <div class="swiper-slide " >
+                                <em></em>
+                                <em></em>
+                                <span>企业价值观</span>
+                            </div>
+                            <div class="swiper-slide " >
+                                <em></em>
+                                <em></em>
+                                <span>服务理念</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--荣誉证书-->
+    <div class="part5">
+        <div class="w1280">
+            <div class="layout-tilte wow fadeInDown">
+                <p>荣誉资质</p>
+                <p></p>
+            </div>
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div id="certify">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/15.jpg" /><p>荣获2023年面向SDG的中国行动“金钥匙•优胜奖”</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/14.jpg" /><p>荣获2023年向光奖·年度商业向善TOP10</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/13.jpg" /><p>荣获第二届ESG年度大奖-循环经济奖</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/1.jpg" /><p>荣膺2022年时代财智·亚洲最具潜力独角兽奖</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2.jpg" /><p>入选可持续消费中国企业行动报告优秀案例</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/3.jpg" /><p>中国家具协会会员单位</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/4.jpg" /><p>中环联合碳减排评价证书</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/5.jpg" /><p>绿色共享与循环利用贡献奖</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/7.jpg" /><p>中国旧货业协会业务经营资格证</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/8.jpg" /><p>中国绿化基金会捐赠证书</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/9.jpg" /><p>深圳市办公设备租赁行业协会理事单位</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/10.jpg" /><p>中国旧货业协会副会长单位</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/11.jpg" /><p>京东循环发展产业联盟常务理事单位</p></div>
+                            <div class="swiper-slide"><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/12.jpg" /><p>全国二手货标准化技术委员会委员</p></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-certify"></div>
+                    <div class="swiper-button-prev swiper-prev-certify"></div>
+                    <div class="swiper-button-next swiper-next-certify"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--发展历程-->
+    <div class="course">
+        <div class="w1280" style="    position: relative;">
+            <div class="layout-tilte wow fadeInUp">
+                <p style="color: #ffffff">发展历程</p>
+                <p></p>
+            </div>
+            <div class="course-box wow fadeInUp" data-wow-delay="0.1s">
+                <div class="swiper-container milestone-tab">
+                    <div class="swiper-wrapper milestone-title">
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.1s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute !important;" >2024</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.1s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute !important;" >2023</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.2s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute !important;" >2022</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.3s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2021</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.4s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2020</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.5s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2019</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li wow flipInX" data-wow-delay="0.6s">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2018</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2017</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2016</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2015</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2014</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2013</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2011</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-li">
+                                <div class="item-active1"></div>
+                                <!--<div class="item-active2"></div>-->
+                                <span style="position: absolute;">2009</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container milestone-content" style="padding-top: 70px">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/lc-24-495.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>9月</span><br>成立上海浦东金桥店，展厅面积750平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/lc-23.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>3月</span><br>成立香港分公司，仓储及展厅面积800平米</p>
+                                        <p><span>7月</span><br>开设北京双桥店，展厅面积1200平米</p>
+                                        <p><span>10月</span><br>成立新加坡分公司</p>
+                                        <p><span>11月</span><br>新增北京李桥店，展厅及仓储面积12000平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2022.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>4月</span><br>深圳分公司扩仓，仓储及展区面积增至8000平米<br>广州分公司搬至番禺区丽景路，仓储及展区面积11000平米</p>
+                                        <p><span>11月</span><br>成立重庆分公司，仓储及展厅面积6000平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2021.jpg" alt=""></dt>
+                                    <dd>
+                                        <p>
+                                            <span>4月</span><br>
+                                            获批中国循环经济协会理事单位
+                                        </p>
+                                        <p>
+                                            <span>5月</span><br>
+                                            成立深圳分公司，仓储及展区面积5000平米<br>
+                                        </p>
+                                        <p>
+                                            <span>6月</span><br>
+                                            获批深圳市办公设备租赁行业协会理事单位<br>
+                                        </p>
+                                        <p>
+                                            <span>7月</span><br>
+                                            获批中国家具协会会员单位<br>
+                                        </p>
+                                        <p>
+                                            <span>9月</span><br>
+                                            成立上海闵行分公司，仓储及展区面积5000平米<br>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2020.jpg" alt=""></dt>
+                                    <dd>
+                                        <p>
+                                            <span>5月</span><br>
+                                            成立上海浦东分公司，仓储及展区面积2000平米
+                                        </p>
+                                        <p>
+                                            <span>12月</span><br>
+                                            上海分公司搬迁至青浦华新镇，仓储面积扩展至12000平米<br>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2019.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>5月</span><br>成立杭州分公司，仓储及展区面积6000平米</p>
+                                        <p><span>9月</span><br>成立成都分公司，仓储及展区面积6000平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2018.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>3月</span><br>获批为中国旧货业协会副会长单位<br>作为二手龙头企业入驻山东枣庄市国际闲置品循环链示范区</p>
+                                        <p><span>8月</span><br>北京朝阳区尚都SOHO店盛大开业</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2017.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>11月</span><br>成为循环发展产业联盟常务理事单位</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2016.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>1月</span><br>正式启用并推广“装配师”品牌</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2015.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>4月</span><br>成立广州分公司，仓储及展区面积4000平米</p>
+                                        <p><span>7月</span><br>成立天津分公司，仓储及展区面积7500平米</p>
+                                        <p><span>9月</span><br>成立武汉分公司，仓储及展区面积5000平米</p>
+                                        <p><span>11月</span><br>成立长沙分公司，开展公司全网营销运营与研发</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2014.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>6月</span><br>获批为家具办公设备数码产品专业委员会常务副会长单位</p>
+                                        <p><span>8月</span><br>北京仓储面积扩展至10000平米</p>
+                                        <p><span>9月</span><br>上海分公司，仓储及展区面积拓展至6000平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2013.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>9月</span><br>获批为中国旧货业协会会员单位</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2011.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>10月</span><br>北京仓储面积扩展至6500平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="milestone-item">
+                                <dl>
+                                    <dt><img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/2009.jpg" alt=""></dt>
+                                    <dd>
+                                        <p><span>8月</span><br>创立北京公司，北京仓储面积600平米</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-prev-course"></div>
+            <div class="swiper-button-next swiper-next-course"></div>
+        </div>
+    </div>
+
+    <!--公益-->
+    <div class="welfare">
+        <div class="w1280">
+            <div class="layout-tilte wow fadeInUp">
+                <p >爱心公益</p>
+                <p></p>
+            </div>
+            <div class="welfare-box wow fadeInUp" data-wow-delay="0.1s">
+                <div class="swiper-container swiper-welfare">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy24.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2024年1月</p>
+                                    <p>开启大树之光 × 守护童心计划第三期，将上千绘本、跳绳、筋膜球等物品分别寄往云南昭通社区、深圳南山区星途创艺梦想画室</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy23.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2023年12月</p>
+                                    <p>大树之光×守护童心计划，将279本童书绘本送到云南泸沽湖达组小学有需要的孩子手中</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy22.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2023年8月</p>
+                                    <p>为渣打银行“未来创客”项目捐赠241088元，用于开展公益慈善活动</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy01.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2022年12月</p>
+                                    <p>携手JLL仲量联行，开启大树之光 × 换新衣计划，向云南昭通大寨村完小学及新开村小学的339位孩子送去冬衣御寒</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy02.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2022年10月</p>
+                                    <p>大树之光 × 湿地守护计划，向上海崇明东滩鸟类国家级自然保护区中兴镇富圩村基地教室捐赠家具69件</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl >
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy03.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2022年04月</p>
+                                    <p>联动渣打银行向广东省云浮市新兴县三所小学及贫困学子捐赠650套课桌椅，88把课椅，价值20万元</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy04.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2022年1月</p>
+                                    <p>大树之光公益活动启程，携手麦森医疗向花仓村捐助物资，普及医疗急救知识</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy05.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2021年12月</p>
+                                    <p>联合各界爱心企业发起大树之光公益系列计划，征集活动已于12月8日正式启动</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy06.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2021年10月</p>
+                                    <p>装配师&正品达联手向大凉山雷波县四所学校捐赠700套课桌椅，价值约20万元</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy07.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2020-2025年</p>
+                                    <p>每年向中国绿化基金会捐赠10万元，开展新疆干旱区立地生态保护修复建设项目</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy08.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2019年6月</p>
+                                    <p>向北京金盏东村双语学校免费捐赠了75件办公家具</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy09.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2018年3月</p>
+                                    <p>向海兴县小山乡赵高教学点进行家具捐赠</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy10.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2015年6月</p>
+                                    <p>向北京爱力重症肌无力罕见病关爱中心捐赠绿色一批办公家具，大力支持爱力机构</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy11.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2015年2月</p>
+                                    <p>向地球妈妈易解放女士捐助2万元，在内蒙植树2000棵</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy12.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2014年11月</p>
+                                    <p>向一名白血病孩子捐赠</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy13.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2014年10月</p>
+                                    <p>向一名患眼癌的孩子捐赠，并向孩子家长提供合适的工作机会</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy14.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2014年7月</p>
+                                    <p>参与株洲儿童福利院献爱心活动，并捐赠几十台学习机</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy15.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2014年5月</p>
+                                    <p>与中国旧货业协会及中国环保协会一起为从事环保行业的小微企业捐助办公家具</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy16.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2014年5月</p>
+                                    <p>免费为社会各界捐助价值40余万元的二手办公家具</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy17.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2013年11月</p>
+                                    <p>与中国旧货业协会、中国环保协会协办办公家具免费捐赠活动</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy18.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2013年5月</p>
+                                    <p>参与“金秋助学”活动向3名大学生资助学费至今</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy19.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2013年5月</p>
+                                    <p>通过清华紫光教育的引荐向北京的藏区孤儿院资助了100多把高档折叠椅</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy20.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2013年2月</p>
+                                    <p>北京昌平汶川地震孤儿的福利院捐助价值3万元的椅子</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide" >
+                            <dl>
+                                <dt> <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/gy21.jpg" alt=""></dt>
+                                <dd>
+                                    <p>2011年9月</p>
+                                    <p>借助“荧火虫”平台资助多名家境贫穷的孩子至今</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-welfare"></div>
+                </div>
+
+                <div class="swiper-button-prev swiper-prev-welfare"></div>
+                <div class="swiper-button-next swiper-next-welfare"></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{{ end }}
+
+{{ define "footscript" }}
+<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/wow.min.js"></script>
+<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/about.js"></script>
+{{ end }}

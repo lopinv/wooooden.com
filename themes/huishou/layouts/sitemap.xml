@@ -56,7 +56,7 @@
                     {{- $imageUrls = $imageUrls | append $image }}
                 {{- end }}
             {{- else }}
-                {{- $imageUrls = $imageUrls | append "https://cdn.jsdelivr.net/gh/lopinv/wooooden.com/static/assets/images/logo.png" }}
+                {{- $imageUrls = $imageUrls | append "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" }}
             {{- end }}
             {{- $page := . }}
             {{- if $imageUrls }}
