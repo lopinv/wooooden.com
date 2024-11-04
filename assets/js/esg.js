@@ -1,20 +1,22 @@
-var vm = new Vue({
-	el: '#content',
-	data: {
 
-	},
-	created() {
-		if (/Android|webOS| iPhone | iPad | iPod |BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i
-			.test(navigator.userAgent)) {
-			//window.location.href = "/wap/esg";
+document.addEventListener('DOMContentLoaded', function () {
+	var vm = new Vue({
+		el: '#content',
+		data: {
+
+		},
+		created() {
+			if (/Android|webOS| iPhone | iPad | iPod |BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i
+				.test(navigator.userAgent)) {
+				//window.location.href = "/wap/esg";
+			}
+			setInterval(this.scroll, 4000);
+		},
+		methods: {
+
 		}
-		setInterval(this.scroll, 4000);
-	},
-	methods: {
-
-	}
+	});
 });
-
 
 // 轮播
 var swiperBanner = new Swiper('.swiper-banner', {
