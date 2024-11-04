@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 	var vm = new Vue({
 		el: '#content',
 		data: {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 	});
-});
+// });
 // 轮播
 var swiper = new Swiper('.carousel', {
 	autoplay: true,
