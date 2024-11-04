@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "李桥店展厅",
 					area: "12000",
 					address: "北京市顺义区Y603（沿沙路）楚天子谋大厦",
-					url: "https://bj.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/bj1.jpg',
 						'https://static.deartree.com/jdwy/images/pc/bj2.jpg',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "青浦展厅",
 					area: "12000",
 					address: "上海市青浦区嘉松中路3568号",
-					url: "https://sh.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/sh-qp-1.jpg',
 						'https://static.deartree.com/jdwy/images/pc/sh-qp-2.jpg',
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "浦东展厅",
 					area: "5000",
 					address: "上海市浦东新区秀沿路128号11号楼3F第二树",
-					url: "https://pd.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/shpd01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/shpd02.jpg',
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "闵行展厅",
 					area: "5000",
 					address: "上海市松江区申光路168号6栋115号",
-					url: "https://mh.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/sh-mh-1.jpg',
 						'https://static.deartree.com/jdwy/images/pc/sh-mh-2.jpg',
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "广州展厅",
 					area: "11000",
 					address: "广州市番禺区丽景路78号",
-					url: "https://gz.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/gz1.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/gz02.jpg',
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "深圳展厅",
 					area: "8000",
 					address: "深圳市南山区麻磡社区奇星路47号",
-					url: "https://sz.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/sz01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/sz02.jpg',
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "天津展厅",
 					area: "7500",
 					address: "天津市北辰区青光镇铁锅店村104国道旁",
-					url: "https://tj.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/tj01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/tj02.jpg',
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "武汉展厅",
 					area: "5000",
 					address: "武汉市洪山区白沙洲大道2号（华中城物流建材大市场）4栋3楼",
-					url: "https://wh.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/wh01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/wh02.jpg',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "杭州展厅",
 					area: "6000",
 					address: "杭州市萧山区义蓬街道南沙路17号",
-					url: "https://hz.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/hz01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/hz02.jpg',
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "成都展厅",
 					area: "8000",
 					address: "成都市双流区西航港大道中三段2667号第二树",
-					url: "https://cd.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/cd01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/cd02.jpg',
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "重庆展厅",
 					area: "6000",
 					address: "重庆市江北区江北城组团A07地块(江北嘴金融城旁)俊豪ICFC，A座305",
-					url: "https://cq.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/cq01.jpg',
 						'https://jdwy-goods.oss-cn-shanghai.aliyuncs.com/jdwy/web/images/about/site/cq02.jpg',
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "双桥店展厅",
 					area: "1200",
 					address: "北京市朝阳区豆各庄乡Find未来园区二楼",
-					url: "https://bj.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/bj-sq-1.jpg',
 						'https://static.deartree.com/jdwy/images/pc/bj-sq-2.jpg',
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					city: "金桥店展厅",
 					area: "750",
 					address: "上海市浦东新区金苏路200号金桥万创中心F栋",
-					url: "https://sh.jdwy.cn/",
+					url: "/kefu.html",
 					imgs:[
 						'https://static.deartree.com/jdwy/images/pc/sh-jq-1.jpg',
 						'https://static.deartree.com/jdwy/images/pc/sh-jq-2.jpg',
