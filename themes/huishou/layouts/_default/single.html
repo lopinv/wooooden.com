@@ -18,7 +18,7 @@
         {{- $imageUrls = $imageUrls | append $image }}
     {{- end }}
 {{- else }}
-    {{- $imageUrls = $imageUrls | append "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" }}
+    {{- $imageUrls = $imageUrls | append "/assets/images/logo.png" }}
 {{- end }}
 {{- $imageUrl := "" }}
 {{- $imageUrl = index $imageUrls 0 }}
@@ -159,8 +159,8 @@
                     "@type": "ImageObject",
                     "inLanguage": "zh-CN",
                     "@id": "{{ .Site.BaseURL | absLangURL }}/schema/logo/image/",
-                    "url": "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png",
-                    "contentUrl": "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png",
+                    "url": "/assets/images/logo.png",
+                    "contentUrl": "/assets/images/logo.png",
                     "width": 453,
                     "height": 180,
                     "caption": "{{ .Site.Params.company.Name }}"
@@ -190,7 +190,7 @@
 {{ end }}
 
 {{ define "headscript" }}
-<link rel="stylesheet" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/info.css">
+<link rel="stylesheet" href="/assets/css/info.css">
 <style>
     .footer-mode {
         background-color: #efefef !important;
@@ -255,7 +255,7 @@
               </div>
               <div class="info-btn">
                   <div class="btn-dz active" onclick="saveGive('32')">
-                      <img src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/dz2.png">
+                      <img src="/assets/picture/dz2.png">
                       <span>2</span>
                   </div>
               </div>
@@ -273,7 +273,7 @@
           </div>
           <div class="box-right">
               <div class="right-news-list">
-                  <div class="right-banner" style="background-image: url('https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/banner-right.jpg')">
+                  <div class="right-banner" style="background-image: url('/assets/images/banner-right.jpg')">
                   </div>
                   <div class="right-tab">
                       <ul>
@@ -289,7 +289,7 @@
                         {{ range . }}
                             {{ $content := .Content }}
                             {{ $matches := findRE `src="([^"]+)"` $content -1 }}
-                            {{ $imageUrl := "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" }}
+                            {{ $imageUrl := "/assets/images/logo.png" }}
                             {{ if $matches }}
                                 {{ $firstMatch := index $matches 0 }}
                                 {{ $extractedUrl := replaceRE `src="([^"]+)"` "${1}" $firstMatch }}
@@ -363,7 +363,7 @@
           </div>
           <div class="box-banner" style="padding-top: 30px">
               <a href="news/detail/29.html" target="_blank"><img
-                      data-original="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/banner-bottom.jpg" class="lazyload"></a>
+                      data-original="/assets/picture/banner-bottom.jpg" class="lazyload"></a>
           </div>
       </div>
 
@@ -373,5 +373,5 @@
 {{ end }}
 
 {{ define "footscript" }}
-<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/news.js"></script>
+<script src="/assets/js/news.js"></script>
 {{ end }}

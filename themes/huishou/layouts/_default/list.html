@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "headscript" }}
-<link rel="stylesheet" href="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/css/news.css">
+<link rel="stylesheet" href="/assets/css/news.css">
 <style>
     .footer-mode {
         background-color: #efefef !important;
@@ -67,7 +67,7 @@
                   {{ range .Paginator.Pages }}
                     {{ $content := .Content }}
                     {{ $matches := findRE `src="([^"]+)"` $content -1 }}
-                    {{ $imageUrl := "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" }}
+                    {{ $imageUrl := "/assets/images/logo.png" }}
                     {{ if $matches }}
                         {{ $firstMatch := index $matches 0 }}
                         {{ $extractedUrl := replaceRE `src="([^"]+)"` "${1}" $firstMatch }}
@@ -102,7 +102,7 @@
       <div class="box-right">
           <div class="right-news-list">
               <div class="right-banner"
-                  style="background-image: url('https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/banner-right.jpg');margin-bottom: 15px;"></div>
+                  style="background-image: url('/assets/images/banner-right.jpg');margin-bottom: 15px;"></div>
               <div class="right-tab">
                   <ul>
                       <li>热门推荐<em></em></li>
@@ -125,7 +125,7 @@
                     
                     {{ $content := $page.Content }}
                     {{ $matches := findRE `src="([^"]+)"` $content -1 }}
-                    {{ $imageUrl := "https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/images/logo.png" }}
+                    {{ $imageUrl := "/assets/images/logo.png" }}
                     {{ if $matches }}
                         {{ $firstMatch := index $matches 0 }}
                         {{ $extractedUrl := replaceRE `src="([^"]+)"` "${1}" $firstMatch }}
@@ -196,7 +196,7 @@
           </div>
       </div>
       <div class="box-banner" style="padding-top: 30px">
-          <a href="news/detail/29.html" target="_blank"><img data-original="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/picture/banner-bottom.jpg"
+          <a href="news/detail/29.html" target="_blank"><img data-original="/assets/picture/banner-bottom.jpg"
                   class="lazyload"></a>
       </div>
   </div>
@@ -204,5 +204,5 @@
 {{ end }}
 
 {{ define "footscript" }}
-<script src="https://gitee.com/lopins/wooooden.com/raw/gh-pages/assets/js/news.js"></script>
+<script src="/assets/js/news.js"></script>
 {{ end }}
